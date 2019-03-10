@@ -1,25 +1,42 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+name: Ajit Johnson Nirmal
+description: Cancer Geneticist,<a href="https://scholar.harvard.edu/ajitjohnson"> Harvard University </a>| Voicing for evidence based policies to preserve our species for another million years.
+meta_description: "Cancer Geneticist @ Harvard University"
 
-# Permalinks
-permalink:        pretty
+aboutPage: true
 
-# Setup
-title:            Ajit Johnson Nirmal
-tagline:          'Cancer Geneticist @ Harvard University'
-description:      'Voicing for evidence based policies to preserve our species for another million years.'
-url:              http://ajitjohnson.github.io
-baseurl:          /
+markdown: kramdown
+highlighter: rouge
 
-author:
-  name:           'Ajit Johnson Nirmal'
-  url:            https://twitter.com/ajitjohnson_n
+plugins: [jekyll-paginate]
+paginate: 20
+domain_name: 'https://ajitjohnson.github.io'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus: false
+disqus_shortname: 'your-disqus-shortname'
 
-paginate:         5
+# Details for the RSS feed generator
+url:            'http://your-blog-url.example.com'
+author:         'Your Name'
+authorTwitter:  'YourTwitterUsername'
 
-# Custom vars
-version:          2.1.0
+permalink:       /:year/:title/
 
-github:
-  repo:           https://github.com/ajitjohnson/ajitjohnson.github.io
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post

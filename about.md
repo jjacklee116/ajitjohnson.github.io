@@ -1,8 +1,9 @@
 ---
-layout: page
 title: About
+permalink: about/
+profile: true
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+This is a static page. It could be an 'about page' if you'd like.
+
+{% include footer.html %}
