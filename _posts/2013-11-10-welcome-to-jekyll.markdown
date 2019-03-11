@@ -12,7 +12,7 @@ Lets face it, no single person or policy maker or law can make this happen. Only
 
 Many of us stop learning once we pass out of school or college. We are no longer aware of the latest advancements in science and their implications. For example, how many of you knew that diamonds are no longer the hardest material on the planet? What I am trying to get at is times are changing and we are no longer aware of the evidence based conclusions or solutions anymore. It is time for scientists who have been studying these issues or parts of these issues for years to step up and educate the public.
 
-### Here is an open letter to all the scientists and researchers out there.
+## **Here is an open letter to all the scientists and researchers out there.**
 
 Hello there, I can imagine how fascinated and dedicated you are about your research, you might have spent years planning and carefully working on it, day in and day out. You might have also spent several months writing up your work to share it with other scientists in your field but have you ever taken a day or two to share it with the public who matter the most?
 
@@ -50,7 +50,9 @@ Most people clearly wanted scientists to connect with them directly. Science is 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Not journalists. A fundamental mechanism of cancer regulation in mice found; news screams &quot;Researchers Found Cure for Cancer&quot;</p>&mdash; Henry Parker (@hparker48) <a href="https://twitter.com/hparker48/status/867360426899587072?ref_src=twsrc%5Etfw">May 24, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-### Some said a combination of both scientists and journalists because scientists seem to clearly get journalism wrong.
+
+## **Some said a combination of both scientists and journalists because scientists seem to clearly get journalism wrong.**
+
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">In theory, both; in practice, I&#39;ve spent hours w/ journos explaining, then never heard from them again, saw totally diff. spin published</p>&mdash; radu ioviță (@iovitza) <a href="https://twitter.com/iovitza/status/867056795789000704?ref_src=twsrc%5Etfw">May 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -62,7 +64,7 @@ Anyway you get the point. People would like to hear from you in an easy and unde
 
 If you are convinced to blog about your research, great! But the problem is not solved yet. There is sadly no “one go-to place” on the internet where people can read articles written by the authors of the research themselves. As much as it is important for researchers to write about their research it is also important that they are all in one reliable place.
 
-### To solve this, I had established a platform called “The Surg” solely in an effort to provide a destination for people to read about the latest research from the scientists themselves.
+## **To solve this, I had established a platform called “The Surg” solely in an effort to provide a destination for people to read about the latest research from the scientists themselves.**
 
 I have been working hard, trying to convince scientists to write about their research here and also to making short videos explaining their latest research. A few more amazing students have joined me in his venture now. A small group like us will not be able to do everything but if you join us, together we can do greater things. If we can work together and get your research and your colleagues research blogged, may be more researchers will start writing. It starts with YOU !!
 
