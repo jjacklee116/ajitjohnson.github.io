@@ -4,7 +4,7 @@ permalink: publications/
 profile: false
 ---
 
-## My Publications
+## Publications
 
 #### I will try and keep this updated. At least for the sake of my own reference.
 
