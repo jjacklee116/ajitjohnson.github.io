@@ -21,10 +21,10 @@ profile: false
 ☺ Multidimensional genome-wide analyses show accurate FVIII integration by ZFN in primary human cells - [Molecular Therapy](http://www.sciencedirect.com/science/article/pii/S1525001616309789), 2016
 
 
-* Peptide vaccine therapy in colorectal cancer - [Vaccines](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552199/), 2013
+☺ Peptide vaccine therapy in colorectal cancer - [Vaccines](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552199/), 2013
 
 
-* Cell-cycle analysis and micronuclei frequency reveals G0/G1 blockers as weak micronuclei inducers - [Drug and chemical toxicology](http://www.tandfonline.com/doi/abs/10.3109/01480545.2012.737803), 2013
+☺ Cell-cycle analysis and micronuclei frequency reveals G0/G1 blockers as weak micronuclei inducers - [Drug and chemical toxicology](http://www.tandfonline.com/doi/abs/10.3109/01480545.2012.737803), 2013
 
 
 ---

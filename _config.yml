@@ -19,7 +19,7 @@ url:            'http://ajitjohnson.github.io'
 author:         'Ajit Johnson Nirmal'
 authorTwitter:  'ajitjohnson_n'
 
-permalink:       /:year/:title/
+permalink:       /:title/
 
 defaults:
     -
