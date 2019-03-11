@@ -1,7 +1,7 @@
 ---
 title: Publications
 permalink: publications/
-profile: true
+profile: false
 ---
 
 I will try and keep this updated. At least for the sake of my own reference.
