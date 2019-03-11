@@ -6,5 +6,11 @@
     {% if page.url != "/about/" %}
         <a href="{{ "/" | relative_url  }}about">About </a>
     {% endif %}
-    <a class="cta" href="{{ "/" | relative_url  }}feed.xml">Subscribe</a>
+    {% if page.url != "/publications/" %}
+        <a href="{{ "/" | relative_url  }}publications">Publications </a>
+    {% endif %}
+    {% if page.url != "/media/" %}
+        <a href="{{ "/" | relative_url  }}media">Media </a>
+    {% endif %}
+    <a class="cta" href="https://twitter.com/ajitjohnson_n" target="_blank">Twitter</a>
 </nav>
