@@ -4,7 +4,16 @@ permalink: about/
 profile: false
 ---
 
-Hi everyone, umm, where do I start? I'm Ajit and I am currently a Research Fellow at the Dana-Farber Cancer Institute and Harvard Medical School. I work on multi-dimensional characterization of minimal residual disease (MRD’s) in lymphoma to delineate their genetic, transcriptional, spatial and biophysical attributes at a single-cell level to identify MRD-specific vulnerabilities, thereby to shift the paradigm of lymphoma treatment from maximum tumor debulking to cure. My study also catalyzes advances across other cancer types by providing the necessary platform technologies, resources and computational tools. The ultimate impact that I envision is a paradigm shift toward biomarker-based approaches for converting deep remissions of lymphomas into cures.
+### About Me
+
+
+Hi everyone, umm, where do I start? I'm Ajit and I am currently a [Research Fellow](https://scholar.harvard.edu/ajitjohnson) at the Dana-Farber Cancer Institute and Harvard Medical School.
+
+
+I work on multi-dimensional characterization of minimal residual disease (MRD’s) in lymphoma to delineate their genetic, transcriptional, spatial and biophysical attributes at a single-cell level to identify MRD-specific vulnerabilities, thereby to shift the paradigm of lymphoma treatment from maximum tumor debulking to cure.
+
+
+My study also catalyzes advances across other cancer types by providing the necessary platform technologies, resources and computational tools. The ultimate impact that I envision is a paradigm shift toward biomarker-based approaches for converting deep remissions of lymphomas into cures.
 
 
 I received a PhD in cancer genetics and genomics from the University of Edinburgh. During my PhD I used large cancer datasets to identify, characterize and model immune system across different tumor types. I developed [ImSig](https://github.com/ajitjohnson/imsig), a network-based computational framework that facilitates the characterization of immune cells within the tumor microenvironment.
