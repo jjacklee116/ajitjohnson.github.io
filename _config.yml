@@ -9,13 +9,13 @@ highlighter: rouge
 
 plugins: [jekyll-paginate]
 paginate: 20
-domain_name: 'https://ajitjohnson.github.io'
+domain_name: 'https://ajitjohnson.com'
 google_analytics: 'UA-XXXXXXXX-X'
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
-url:            'http://ajitjohnson.github.io'
+url:            'https://ajitjohnson.com'
 author:         'Ajit Johnson Nirmal'
 authorTwitter:  'ajitjohnson_n'
 
