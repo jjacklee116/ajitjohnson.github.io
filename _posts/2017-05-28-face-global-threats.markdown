@@ -5,6 +5,8 @@ comments: true
 description: Diseases, energy crisis, climate change, antibiotic resistance, pollution etc.. You name it ! How can we deal with these global threats?
 ---
 
+{{ page.url }}
+
 Diseases, energy crisis, climate change, antibiotic resistance, pollution etc.. You name it ! How can we deal with these global threats?
 
 > The simple answer is “together”.
