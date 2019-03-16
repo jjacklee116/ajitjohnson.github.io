@@ -10,9 +10,9 @@ highlighter: rouge
 plugins: [jekyll-paginate]
 paginate: 20
 domain_name: 'https://ajitjohnson.com'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-87347639-1'
 disqus: false
-disqus_shortname: 'your-disqus-shortname'
+disqus_shortname: 'ajitjohnson-com'
 
 # Details for the RSS feed generator
 url:            'https://ajitjohnson.com'

@@ -1,6 +1,7 @@
 ---
 title:  "To face global threats, scientists need to change"
 date:   2017-05-28 10:18:00
+comments: true
 description: Diseases, energy crisis, climate change, antibiotic resistance, pollution etc.. You name it ! How can we deal with these global threats?
 ---
 
