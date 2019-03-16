@@ -70,28 +70,3 @@ If you are convinced to blog about your research, great! But the problem is not 
 I have been working hard, trying to convince scientists to write about their research here and also to making short videos explaining their latest research. A few more amazing students have joined me in his venture now. A small group like us will not be able to do everything but if you join us, together we can do greater things. If we can work together and get your research and your colleagues research blogged, may be more researchers will start writing. It starts with YOU !!
 
 > Together we can change the world.
-
-Comments:
-
-<section class="disqus">
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-this.page.url = {{ site.url }}{{ page.url }};  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = {{ page.id }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://ajitjohnson-com.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
