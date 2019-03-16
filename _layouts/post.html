@@ -6,8 +6,8 @@ archive: true
 <article class="post">
     <header>
         <h1>{{ page.title }}</h1>
-        <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }} • <img src="//counter.websiteout.net/compte.php?S='+encodeURI(window.location.hostname)+'&C=36&D=0&N=0&M=0" alt="" border="0" style="width:10px;height:10px"; </img></h2>
-        document.write('<img src="//counter.websiteout.net/compte.php?S='+encodeURI(window.location.hostname)+'&C=36&D=0&N=0&M=0" alt="" border="0" style="width:10px;height:10px";/>');
+        <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }}</h2>
+        {{ post._ga }}
     </header>
     <section id="post-body">
         {{content}}
