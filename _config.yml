@@ -26,7 +26,7 @@ jekyll_ga:
   key_file: ajitjohnson-analytics-08a77bf88715.p12  # service account private key file
   key_secret: notasecret    # service account private key's password
   profileID: ga:133666144        # profile ID
-  start: 99 years ago         # Beginning of report
+  start: 5/27/1988        # Beginning of report
   end: now                  # End of report
   metric: ga:pageviews      # Metric code
   segment:                  # optional
