@@ -3,11 +3,9 @@ title: Publications
 permalink: publications/
 profile: false
 ---
-
+<br>
 ## Publications
 <br>
-<br>
-
 #### I will try and keep this updated. At least for the sake of my own reference.
 
 ☺ Immune cell gene signatures for profiling the microenvironment of solid tumors - [Cancer immunology research](http://cancerimmunolres.aacrjournals.org/content/6/11/1388), 2018
