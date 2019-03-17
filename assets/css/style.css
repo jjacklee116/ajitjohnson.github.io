@@ -244,7 +244,7 @@ em, i { font-style: italic; }
 	/*font: italic 22px/1.3em Georgia,serif;*/
 	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin: -5px 0 40px 0;
-	  font-size: 8px;
+	  font-size: 55%;
 		color: black;
 	  text-transform: uppercase;
 	  letter-spacing: 2px;
