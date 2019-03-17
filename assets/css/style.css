@@ -354,13 +354,8 @@ thead th,th {
 }
 
 img {
-	width: 100%;
 	max-width: 100%;
 	border-radius: 3px;
-}
-
-.post h2.headline img {
-	width: unset;
 }
 
 /* Made with Cactus Badge */
