@@ -359,6 +359,10 @@ img {
 	border-radius: 3px;
 }
 
+.post h2.headline img {
+	width: unset;
+}
+
 /* Made with Cactus Badge */
 #badge {
 	position: absolute;
