@@ -21,6 +21,6 @@ Once you complete your application, you are given a tracking number. Check out m
 
 Surprisingly, the process is extremely quick as well. Well done India! As you can see below, I submitted my application on the 22nd of March and within 4 days the entire process was completed. Btw, it includes a field verification step- which means some one from the department will go to your house and verify that you are real person. As a part of your application you will need to include/nominate one person from your household to basically tell the person going to your house that you are real and that the address you provided is your real Indian address.
 
-![Tracking online application- Status update](/assets/images/status_update.png)
+![Tracking online application- Status update](/assets/images/status_update.PNG)
 
 As an overseas (NRI) elector you are not issued an EPIC but you will be allowed to cast your vote in your constituency, in person at the polling station upon production of your original passport. Therefore, do not forget to take your passport to the booth. According to estimates of MEA, there are about 31 million NRIs living in different countries across the world. Which makes us a significantly large chunk of the voting population. So please, if you are able to travel, go on and cast your vote. If you found this helpful or have any question drop a line in the comment section. Have a nice day ☺
