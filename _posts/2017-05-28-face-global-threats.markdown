@@ -3,6 +3,8 @@ title:  "To face global threats, scientists need to change"
 date:   2017-05-28 10:18:00
 comments: true
 description: Diseases, energy crisis, climate change, antibiotic resistance, pollution etc.. You name it ! How can we deal with these global threats?
+categories: ['Science communication']
+tags: ['research summary', 'surg']
 ---
 
 Diseases, energy crisis, climate change, antibiotic resistance, pollution etc.. You name it ! How can we deal with these global threats?
@@ -19,9 +21,7 @@ Hello there, I can imagine how fascinated and dedicated you are about your resea
 
 I guess the first question that crossed your mind was “who cares apart from someone from my field”? Scientists should know better that everything in this world is interconnected. From energy crisis to climate change, everything is interconnected in someway or the other and every bit of knowledge is necessary for people to put together and see the entire picture.
 
-{% highlight ruby %}
 I know that you have done your years of research and your stats works out to be perfect but people don’t like to be told what to do. Shoving your results on their face is not the way to move forward. If you do so, most of them are not going to deny the facts but rather will cherry pick facts that align with their beliefs.
-{% endhighlight %}
 
 > A change is possible when people are given a chance to solve the puzzle themselves.
 

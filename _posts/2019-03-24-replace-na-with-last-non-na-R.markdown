@@ -3,6 +3,8 @@ title:  "R- Update or replace NA with adjacent column values or last non-NA valu
 date:   2019-03-24 10:18:00
 comments: true
 description: Fill missing values using last or previous observation- A quick vectorized alternative to looping over a data-frame for replacing NA.
+categories: ['R']
+tags: ['coding', 'educational']
 ---
 
 Recently I had a data-frame which contained empty/missing values. It's not uncommon to find yourself with missing values (i.e. NAs), especially in time series. This may be the result of a data omission or some mathematical or merge operation you do on your data. Zoo package provides a variety of functions to handle missing data.
