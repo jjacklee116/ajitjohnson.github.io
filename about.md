@@ -25,8 +25,8 @@ Some of you might also know me from some of the social issue initiatives that I 
 
 ## My official social media profiles
 <br>
-<i class="fab fa-facebook"></i>[ Facebook](https://www.facebook.com/ajitjohnsonnirmal)
-<i class="fab fa-twitter-square"></i>[ Twitter](https://twitter.com/ajitjohnson_n)
+<i class="fab fa-facebook"></i>[ Facebook](https://www.facebook.com/ajitjohnsonnirmal)<br>
+<i class="fab fa-twitter-square"></i>[ Twitter](https://twitter.com/ajitjohnson_n)<br>
 <i class="fab fa-instagram"></i>[ Instagram](https://www.instagram.com/ajitjohnson_n/)
 
 
