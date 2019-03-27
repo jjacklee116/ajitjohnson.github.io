@@ -21,8 +21,9 @@ I am also a strong vocalist for open science. I had developed a platform to con
 
 Some of you might also know me from some of the social issue initiatives that I took on. You can check them out on my [media](/media) page. Beyond these, I enjoy drawing, painting and playing basketball. If you would like to get in touch with me, text me through my [facebook page](https://www.facebook.com/ajitjohnsonnirmal).
 
+---
 
-### My official social media profiles
+## My official social media profiles
 <i class="fab fa-facebook"></i>[ Facebook](https://www.facebook.com/ajitjohnsonnirmal), <i class="fab fa-twitter-square"></i>[ Twitter](https://twitter.com/ajitjohnson_n), <i class="fab fa-instagram"></i>[ Instagram](https://www.instagram.com/ajitjohnson_n/)
 
 
