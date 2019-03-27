@@ -10,7 +10,7 @@ tags: ['coding', 'educational']
 Recently I had a data-frame which contained empty/missing values. It's not uncommon to find yourself with missing values (i.e. NAs), especially in time series. This may be the result of a data omission or some mathematical or merge operation you do on your data. Zoo package provides a variety of functions to handle missing data.
 
 Say I had a dataframe that looks like the one below,
-{% highlight R %}
+{% highlight rconsole %}
 dat <- data.frame(col1 = c(1,2,3,4,5), col2  = c("a", NA, NA , "b", NA))
 
   col1 col2
@@ -23,7 +23,7 @@ dat <- data.frame(col1 = c(1,2,3,4,5), col2  = c("a", NA, NA , "b", NA))
 
 I want to fill in the NA values with the last known non-NA value from that column. So I want the data frame to look like this
 
-{% highlight R %}
+{% highlight rconsole %}
 1    1    a
 2    2    a
 3    3    a
@@ -33,12 +33,13 @@ I want to fill in the NA values with the last known non-NA value from that colum
 
 You could loop through each row and identify rows that have an NA and replace it with the previous value but thankfully there is a much faster alternative. Especially if you are like me who works with millions of data-points, this is a life saver. I came across the na.locf() function in the zoo library which does the job. This function takes the last observation carried forward approach. In most circumstances this is the correct thing to do. It both preserves the last known value and prevents any look-ahead bias from entering into the data. You can also apply next observation carried backward by setting fromLast = TRUE.
 
-{% highlight R %}
+{% highlight rconsole %}
 library(zoo)
 library(dplyr)
 
 dat <- data.frame(col1 = c(1,2,3,4,5), col2  = c("a", NA, NA , "b", NA))
-# Apply function
+
+## Apply function
 
 dat <- na.locf(dat)
 
@@ -52,8 +53,8 @@ dat <- na.locf(dat)
 
 Unfortunately, na.locf() only on columns. But what if you would want to apply it to rows? In this case, you can use an apply function to apply the na.locf() on all rows.
 
-{% highlight R %}
-# We use data.frame because apply function returns a matrix
+{% highlight rconsole %}
+## We use data.frame because apply function returns a matrix
 dat <- data.frame(t(apply(dat, 1, na.locf)))
 {% endhighlight %}
 
