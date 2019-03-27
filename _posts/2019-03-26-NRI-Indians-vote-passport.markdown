@@ -5,6 +5,7 @@ comments: true
 description: Unfortunately, for now you still need to be physically present in India to cast your vote.
 categories: ['social']
 tags: ['India', 'vote']
+header-img: "/assets/images/vote.jpg"
 ---
 
 Are you a Non-Resident Indian living overseas and have not acquired any other citizenship? You can now register online to vote in the upcoming election. However, you need to go to India to cast your vote. Previously you had to be in India to even apply for the Voter ID /Election card. So lets take that as a win for now. Election commission of India is currently conducting trials for e-ballots and proxy voting. Once those trials are successfully completed, there is all the likelihood that an NRI can vote from abroad. But for the upcoming 2019 election, if you are visiting India or are able to make a quick trip, please do consider registering to cast your vote.
