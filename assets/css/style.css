@@ -392,6 +392,7 @@ Post List
 	display: block;
 	font: bold 19px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
 	padding-right: 1%;
+	line-height: 130%;
 }
 
 #post-list .dates {
