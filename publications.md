@@ -30,6 +30,9 @@ profile: false
 
 
 ---
-Here is my [CV](https://ajitjohnson.com/wp-content/uploads/2018/06/CV.pdf) (Updated June 2018)
+## My official social media profiles
+<i class="fab fa-facebook"></i>[ Facebook](https://www.facebook.com/ajitjohnsonnirmal)<br>
+<i class="fab fa-twitter-square"></i>[ Twitter](https://twitter.com/ajitjohnson_n)<br>
+<i class="fab fa-instagram"></i>[ Instagram](https://www.instagram.com/ajitjohnson_n/)
 
 {% include footer.html %}
