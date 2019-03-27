@@ -10,11 +10,11 @@ header-img: "/assets/images/vote.jpg"
 
 Are you a Non-Resident Indian living overseas and have not acquired any other citizenship? You can now register online to vote in the upcoming election. However, you need to go to India to cast your vote. Previously you had to be in India to even apply for the Voter ID /Election card. So lets take that as a win for now. Election commission of India is currently conducting trials for e-ballots and proxy voting. Once those trials are successfully completed, there is all the likelihood that an NRI can vote from abroad. But for the upcoming 2019 election, if you are visiting India or are able to make a quick trip, please do consider registering to cast your vote.
 
-Getting down to how you can do it- I was surprised to learn how simple the process was. Kudos to the people who made it possible. All you need to do is to fill up an online form, and it is not one of those long and painstaking procedures. It took me around 5 - 7 minutes to complete it. At the end you will need to upload a passport size photo and a copy of your passport and so keep them handy. I guess if you are overseas you probably already have them on your computer or phone, ready to go.
+Getting down to how you can do it- I was surprised to learn how simple the process was. Kudos to the people who made it possible. All you need to do is to fill up an online form, and it is not one of those long and painstaking procedures. **It took me around 5 - 7 minutes to complete it**. At the end you will need to upload a passport size photo and a copy of your passport and so keep them handy. I guess if you are overseas you probably already have them on your computer or phone, ready to go.
 
 ## So here is what you need to do  
 
-Go to: [Election commission of India Website](https://www.nvsp.in/Forms/Forms/form6a?lang=en-GB), FORM 6A and fill it up. Well technically that's about it.
+Go to: [Election commission of India Website](https://www.nvsp.in/Forms/Forms/form6a?lang=en-GB){:target="_blank"}, FORM 6A and fill it up. Well technically that's about it.
 
 Once you complete your application, you are given a tracking number. Check out mine below.
 
