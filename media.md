@@ -24,7 +24,7 @@ Here is my [Wikipedia ](https://en.wikipedia.org/wiki/Ajit_Johnson)page.
 
 ---
 **My official social media profiles**:  
-<i class="fab fa-facebook"></i>[ Facebook](https://www.facebook.com/ajitjohnsonnirmal){:target="_blank"}
+<i class="fab fa-facebook"></i>[ Facebook](https://www.facebook.com/ajitjohnsonnirmal)
 <i class="fab fa-twitter-square"></i>[ Twitter](https://twitter.com/ajitjohnson_n)
 <i class="fab fa-instagram"></i>[ Instagram](https://www.instagram.com/ajitjohnson_n/)
 
