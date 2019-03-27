@@ -22,7 +22,6 @@ authorTwitter:  'ajitjohnson_n'
 permalink:       /:title/
 
 plugins:
-  - jekyll-target-blank
 
 defaults:
     -
