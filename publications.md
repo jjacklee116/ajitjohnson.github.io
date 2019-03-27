@@ -28,11 +28,4 @@ profile: false
 
 ☺ Cell-cycle analysis and micronuclei frequency reveals G0/G1 blockers as weak micronuclei inducers - [Drug and chemical toxicology](http://www.tandfonline.com/doi/abs/10.3109/01480545.2012.737803), 2013
 
-
----
-## My official social media profiles
-<i class="fab fa-facebook"></i>[ Facebook](https://www.facebook.com/ajitjohnsonnirmal)<br>
-<i class="fab fa-twitter-square"></i>[ Twitter](https://twitter.com/ajitjohnson_n)<br>
-<i class="fab fa-instagram"></i>[ Instagram](https://www.instagram.com/ajitjohnson_n/)
-
 {% include footer.html %}
