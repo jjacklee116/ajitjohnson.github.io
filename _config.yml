@@ -5,7 +5,7 @@ meta_description: "Cancer Geneticist @ Harvard University"
 aboutPage: true
 
 markdown: kramdown
-highlighter: pygments
+highlighter: Rouge
 
 plugins: [jekyll-paginate]
 paginate: 20
