@@ -13,7 +13,7 @@ Getting down to how you can do it- I was surprised to learn how simple the proce
 
 ## So here is what you need to do  
 
-Go to:<a href="https://www.nvsp.in/Forms/Forms/form6a?lang=en-GB" target="_blank"_>Election commission of India Website</a>, FORM 6A and fill it up. Well technically that's about it.
+Go to:[Election commission of India Website](https://www.nvsp.in/Forms/Forms/form6a?lang=en-GB), FORM 6A and fill it up. Well technically that's about it.
 
 Once you complete your application, you are given a tracking number. Check out mine below.
 
