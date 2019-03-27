@@ -1,5 +1,5 @@
 ---
-title:  "R: Update or replace "NA" with adjacent column values or last "non-NA" value"
+title:  "R: Update or replace NA with adjacent column values or last non-NA value"
 date:   2019-03-24 10:18:00
 comments: true
 description: Fill missing values using last or previous observation: A quick vectorized alternative to looping over a data-frame for replacing NA.
