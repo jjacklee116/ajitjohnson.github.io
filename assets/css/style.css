@@ -450,10 +450,10 @@ Post List
 	font-weight: bold;
 	line-height: 1.4;
 	border-top: 1px solid #eee;
-	padding-top: 40px;
+	padding-top: 20px;
 	margin-bottom: 40px;
 	padding-bottom: 40px;
-	margin-top: 40px;
+	margin-top: 20px;
 	color:#444;
 	border-bottom: 1px solid #eee;
 }
@@ -466,6 +466,7 @@ Post List
 
 #post-meta div span.dark {
 	color: #1E2025;
+	margin-top: 3%;
 
 }
 
