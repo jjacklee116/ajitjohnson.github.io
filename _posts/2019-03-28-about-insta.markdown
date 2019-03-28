@@ -24,3 +24,9 @@ Harvard alone has been the birthplace of over 50 Nobel Laureates. Since I am her
 If these excite you, I would recommend you to hit the follow button and share it with your friends who might also be into the same thing. Most importantly talk to me via the comments section. I will reply to all your comments. If you are someone randomly following people, my humble request is to skip this one because your non-interaction with my subsequent posts will affect the people who are genuinely interested in learning and celebrating science. Thank you.
 
 When your sole purpose is to believe in something bigger than yourself, you act differently. Have a nice day 😊
+
+---
+**My official social media profiles**:  
+<i class="fab fa-facebook"></i>[ Facebook](https://www.facebook.com/ajitjohnsonnirmal){:target="_blank"}
+<i class="fab fa-twitter-square"></i>[ Twitter](https://twitter.com/ajitjohnson_n){:target="_blank"}
+<i class="fab fa-instagram"></i>[ Instagram](https://www.instagram.com/ajitjohnson_n/){:target="_blank"}
