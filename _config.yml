@@ -36,6 +36,7 @@ defaults:
             type: posts
         values:
             layout: post
+            is_post: true # automatically set is_post=true for all posts
     -
         scope:
             path: ""

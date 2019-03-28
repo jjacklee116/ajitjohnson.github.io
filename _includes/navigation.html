@@ -12,5 +12,8 @@
     {% if page.url != "/media/" %}
         <a href="{{ "/" | relative_url  }}media">Media </a>
     {% endif %}
+    {% if page.is_post %}
+        <div name="divHrefB" style="height: 0px;width: 0px;overflow:hidden;"><a href="{{ "/" | relative_url  }}publications">Publications </a></div>
+    {% endif %}
     <a class="cta" href="https://twitter.com/ajitjohnson_n" target="_blank">Twitter</a>
 </nav>
