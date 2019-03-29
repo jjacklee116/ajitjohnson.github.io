@@ -7,7 +7,7 @@ categories: ['science communication']
 tags: ['Instagram', 'science communication ']
 header-img: "/assets/images/insta_science.jpg"
 ---
-For those who don't know me: Hello! 🙋‍ My name is **Ajit Johnson** (You can call me Ajit or A-J) and I am from the most beautiful and diverse corner of the world- India. For those who 'do' know me, you might be wondering why I have an additional Instagram account.
+For those who don't know me: Hello! 🙋‍♂️ My name is **Ajit Johnson** (You can call me Ajit or A-J) and I am from the most beautiful and diverse corner of the world- India. For those who 'do' know me, you might be wondering why I have an additional Instagram account.
 
 I created this [IG account](https://www.instagram.com/ajitjohnson_n/){:target="_blank"} because I see an enormous gap between scientists and non-scientists, which lately with the emergence of social-media and bit-sized messaging has led to the **internet being over-run with fake news and misinformation**- Anti-vaccination, flat earth movement, climate change to name a few. This has translated into a lack of trust in science among people.
 
