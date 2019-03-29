@@ -1,6 +1,6 @@
 ---
 title:  "Getting started with t-SNE for biologist (R)"
-## date:   2019-03-28 10:18:00
+date:   2019-03-29 10:18:00
 comments: true
 description: I believe in the enormous potential of social media in science communication, this Instagram handle is all about that.
 categories: ['R']
@@ -93,16 +93,16 @@ Sample_5            5.0         3.6          1.4         0.2
 {% endhighlight %}
 
 I have an example single-cell RNASeq data for you. <br>
-1. Expression file can be [found here].
-2. The cell-type annotation or meta-data can be [found here].
+1. Expression file can be **[found here](https://github.com/ajitjohnson/ajitjohnson.github.io/blob/master/assets/data/tsne_tutorial/exp.csv){:target="_blank"}**.
+2. The cell-type annotation or meta-data can be **[found here](https://github.com/ajitjohnson/ajitjohnson.github.io/blob/master/assets/data/tsne_tutorial/meta.csv){:target="_blank"}**.
 
-I have already pre-processed the data, performed a clustering analysis and identified the cell types (provided them in meta-data file) based on the genes they express. Go through these two files and familiarize yourself with the their formatting.
+I have already pre-processed the data, performed a clustering analysis and identified the cell types (provided them in the meta file) based on the genes they express. Go through these two files and familiarize yourself with the their formatting.
 
-Expression file: This file should contain cells in rows and genes in columns. All rows (cells) should have a 'unique' cell name and all columns (genes) should also have a 'unique' gene name.
+**Expression file:** This file should contain cells in rows and genes in columns. All rows (cells) should have a 'unique' cell name and all columns (genes) should also have a 'unique' gene name.
 
-The meta-data file: should contain the same row names/ cell names and a column containing the cell-type. This file is only necessary if you would like to color your t-SNE plot based on cell-type.
+**The meta-data file:** should contain the same row names/ cell names and a column containing the cell-type. This file is only necessary if you would like to color your t-SNE plot based on cell-type.
 
-Open your data in excel and format it similar to the one I have provided (save as CSV). Once you are ready, we can go ahead and generate a t-SNE plot of your own data.
+Open your data in excel and format it similar to the one I have provided (save as .CSV). Once you are ready, we can go ahead and generate a t-SNE plot of your own data.
 
 I have saved both of files in a folder called 'tsne_tutorial' on my desktop. So the first step is to tell R, where your files are located. We call this *working directory* in R.
 
@@ -115,11 +115,12 @@ Once the directory is set, R would know where look for your files. Now let's loa
 
 {% highlight python %}
 ## Set working directory
-expression_data <- read.table(file = "exp.csv", row.names = 1, sep=',', header = T) # This command looks for a file named 'exp.csv' and would set the first column as row names/ cell names and the first row as column names/ gene names.
+expression_data <- read.table(file = "exp.csv", row.names = 1, sep=',', header = T) # This command looks for a file named 'exp.csv' within your working directory and would set the first column as row names/ cell names and the first row as column names/ gene names.
 meta_data <- read.table(file = "meta.csv", row.names = 1, sep=',', header = T)
 {% endhighlight %}
 
-Now we are good to go. Lets run the t_SNE algorithm and generate a plot as we did previously.
+**Now we are good to go. Lets run the t_SNE algorithm and generate a plot as we did previously.**
+
 >If you get any error at this point, it probably because your data is not in the right-format. Go back and check if they are okay.
 
 {% highlight python %}
@@ -127,9 +128,9 @@ Now we are good to go. Lets run the t_SNE algorithm and generate a plot as we di
 tsne_realData <- Rtsne(expression_data, perplexity=10, check_duplicates = FALSE)
 {% endhighlight %}
 
-The above step may take a while depending on the size of your dataset. There are quicker options like UMAP which also is slightly better in other ways of maintaining global architecture. If you would like to learn that, let me know in the comments.
+The above step may take a while depending on the size of your dataset. There are quicker options like UMAP which is also slightly better in other ways in maintaining the global architecture of the clusters. If you would like to learn that, let me know in the comments.
 
-Okay we are now ready for the final step, what we have been waiting for all along.
+*Okay we are now ready for the final step!*
 
 {% highlight python %}
 ## Generate the t_SNE plot
@@ -150,11 +151,8 @@ There we have it. In this case,
 7. Cyan is Dendritic cells
 8. Yellow is Megakaryocytes
 
-Hope you successfully generated your own t-SNE plot. If you have an questions or found any particular step difficult follow, please do let me know in comments. You might eventually google and figure it out, but if it took a while for you to do so, probably someone is facing a similar situation as well. So please do let me know and I will update the article to make it more enjoyable for every one.
+Hope you successfully generated your own t-SNE plot. If you have an questions or found any particular step difficult to follow, please do let me know in the comments. You might eventually google and figure it out, however, if it took you a while to do so, probably someone else is facing a similar situation as well. So please do let me know and I will update the article to make it more enjoyable for every one.
+
+PS- If you have single-cell RNASeq data, I would recommend using some single-cell specific packages such as **[seurat](https://satijalab.org/seurat/){:target="_blank"}** in R or **[ScanPy](https://scanpy.readthedocs.io/en/stable/){:target="_blank"}** in python to do your analysis. They include everything from data-processing, clustering and generating plots such as these within them. It will make your life a lot easier.
 
 Bye for now! Have a nice day 😊
-
-
-
-{% highlight python %}
-{% endhighlight %}
