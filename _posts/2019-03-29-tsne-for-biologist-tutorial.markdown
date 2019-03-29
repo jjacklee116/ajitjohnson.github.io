@@ -100,7 +100,8 @@ I have an example single-cell RNASeq data for you. <br>
 <br>
 <br>
 I have already pre-processed the data, performed a clustering analysis and identified the cell types (provided them in the meta file) based on the genes they express. Go through these two files and familiarize yourself with the their formatting.
-
+<br>
+<br>
 **Expression file:** This file should contain cells in rows and genes in columns. All rows (cells) should have a 'unique' cell name and all columns (genes) should also have a 'unique' gene name.
 
 **The meta-data file:** should contain the same row names/ cell names and a column containing the cell-type. This file is only necessary if you would like to color your t-SNE plot based on cell-type.
