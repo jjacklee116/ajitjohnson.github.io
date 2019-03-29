@@ -2,7 +2,7 @@
 title:  "Getting started with t-SNE for biologist (R)"
 date:   2019-03-29 10:18:00
 comments: true
-description: I believe in the enormous potential of social media in science communication, this Instagram handle is all about that.
+description: I am writing this tutorial assuming that you have no coding experience. By the end of this tutorial you would have generated a t-SNE plot of your own data.
 categories: ['R']
 tags: ['tutorial', 'educational', 'tsne', 'coding']
 header-img: "/assets/images/tsne_4.png"
