@@ -101,7 +101,7 @@ I have already pre-processed the data, performed a clustering analysis and ident
 **Expression file:** This file should contain cells in rows and genes in columns. All rows (cells) should have a 'unique' cell name and all columns (genes) should also have a 'unique' gene name.
 
 **The meta-data file:** should contain the same row names/ cell names and a column containing the cell-type. This file is only necessary if you would like to color your t-SNE plot based on cell-type.
-
+<br>
 Open your data in excel and format it similar to the one I have provided (save as .CSV). Once you are ready, we can go ahead and generate a t-SNE plot of your own data.
 
 I have saved both of files in a folder called 'tsne_tutorial' on my desktop. So the first step is to tell R, where your files are located. We call this *working directory* in R.
@@ -142,15 +142,15 @@ plot(tsne_realData$Y, col = "black", bg= meta_data$louvain, pch = 21, cex = 1)
 ![t_SNE plot of single cell data](/assets/images/tsne_3.PNG)
 
 There we have it. In this case,
-1. Green is CD4 T cells
-2. Blue is CD8 T cells
-3. Grey is NK cells
-4. Red is CD14 + Monocytes
-5. Magenta is FCGR3A+ Monocytes
-6. Black is B cells
-7. Cyan is Dendritic cells
-8. Yellow is Megakaryocytes
-
+1. Green is **CD4 T cells**
+2. Blue is **CD8 T cells**
+3. Grey is **NK cells**
+4. Red is **CD14 + Monocytes**
+5. Magenta is **FCGR3A+ Monocytes**
+6. Black is **B cells**
+7. Cyan is **Dendritic cells**
+8. Yellow is **Megakaryocytes**
+<br>
 Hope you successfully generated your own t-SNE plot. If you have an questions or found any particular step difficult to follow, please do let me know in the comments. You might eventually google and figure it out, however, if it took you a while to do so, probably someone else is facing a similar situation as well. So please do let me know and I will update the article to make it more enjoyable for every one.
 
 PS- If you have single-cell RNASeq data, I would recommend using some single-cell specific packages such as **[seurat](https://satijalab.org/seurat/){:target="_blank"}** in R or **[ScanPy](https://scanpy.readthedocs.io/en/stable/){:target="_blank"}** in python to do your analysis. They include everything from data-processing, clustering and generating plots such as these within them. It will make your life a lot easier.
