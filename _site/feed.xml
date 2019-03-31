@@ -2,9 +2,74 @@
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
     <title>Ajit Johnson Nirmal</title>
-    <description>Cancer Geneticist,&lt;a href=&quot;https://scholar.harvard.edu/ajitjohnson&quot;&gt; Harvard University &lt;/a&gt;| Voicing for evidence based policies to preserve our species for another million years.</description>
+    <description>Cancer Geneticist,&lt;a href=&quot;https://scholar.harvard.edu/ajitjohnson&quot; target=&quot;_blank&quot;&gt; Harvard University &lt;/a&gt;| Voicing for evidence based policies to preserve our species for another million years.</description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>What most media doesn't tell you on reporting science</title>
+        
+        
+          <description>&lt;p&gt;In the twenty-first century society, science is the building block that helps us construct and understand the world we live in. However, every so often misreported scientific studies take a toll on science’s credibility. Science is constantly producing new studies and as more intricate segments of nature are being investigated, they are becoming increasingly complex to interpret by non-scientists. Consequently, journalist and television producers often rely on press releases. They shorten those even further, stretching and torturing academic papers until their original meaning of the study has been completely lost. The lack of first-hand interpretation of the study, coupled with sensationalism, exaggeration and hype results in the indoctrination of common people with misleading information.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 31 Mar 2019 06:18:00 -0400</pubDate>
+        <link>http://localhost:4000/What-media-doesnt-tell-you-on-reporting-science/</link>
+        <guid isPermaLink="true">http://localhost:4000/What-media-doesnt-tell-you-on-reporting-science/</guid>
+      </item>
+    
+      <item>
+        <title>Getting started with t-SNE for biologist (R)</title>
+        
+        
+          <description>&lt;p&gt;Hi everyone 🙋‍♂️ With the dramatic increase in the generation of high-dimensional data (single-cell sequencing, RNA-Seq, CyToF, etc..) in biology, the need for visualizing them in a meaningful way has become increasingly important. Also if you are a pure experimental biologist with &lt;strong&gt;little or no coding experience&lt;/strong&gt;, it can sometimes get quiet bothersome to consistently depend on a bio-informatician for generating these plots for your data. To be honest, several packages (think of it as software) are now available within R or Python that has made this process extremely simple.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 29 Mar 2019 06:18:00 -0400</pubDate>
+        <link>http://localhost:4000/tsne-for-biologist-tutorial/</link>
+        <guid isPermaLink="true">http://localhost:4000/tsne-for-biologist-tutorial/</guid>
+      </item>
+    
+      <item>
+        <title>My Instagram handle for science communication (ajitjohnson_n)</title>
+        
+        
+          <description>&lt;p&gt;For those who don’t know me: Hello! 🙋‍♂️ My name is &lt;strong&gt;Ajit Johnson&lt;/strong&gt; (You can call me Ajit or A-J) and I am from the most beautiful and diverse corner of the world- India. For those who ‘do’ know me, you might be wondering why I have an additional Instagram account.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 28 Mar 2019 06:18:00 -0400</pubDate>
+        <link>http://localhost:4000/about-insta/</link>
+        <guid isPermaLink="true">http://localhost:4000/about-insta/</guid>
+      </item>
+    
+      <item>
+        <title>NRI Indians can register online and vote with their passport for the upcoming Lok election</title>
+        
+        
+          <description>&lt;p&gt;Are you a Non-Resident Indian living overseas and have not acquired any other citizenship? You can now register online to vote in the upcoming election. However, you need to go to India to cast your vote. Previously you had to be in India to even apply for the Voter ID /Election card. So lets take that as a win for now. Election commission of India is currently conducting trials for e-ballots and proxy voting. Once those trials are successfully completed, there is all the likelihood that an NRI can vote from abroad. But for the upcoming 2019 election, if you are visiting India or are able to make a quick trip, please do consider registering to cast your vote.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 Mar 2019 06:18:00 -0400</pubDate>
+        <link>http://localhost:4000/NRI-Indians-vote-passport/</link>
+        <guid isPermaLink="true">http://localhost:4000/NRI-Indians-vote-passport/</guid>
+      </item>
+    
+      <item>
+        <title>R- Update or replace NA with adjacent column values or last non-NA value</title>
+        
+        
+          <description>&lt;p&gt;Recently I had a data-frame which contained empty/missing values. It’s not uncommon to find yourself with missing values (i.e. NAs), especially in time series. This may be the result of a data omission or some mathematical or merge operation you do on your data. Zoo package provides a variety of functions to handle missing data.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 24 Mar 2019 06:18:00 -0400</pubDate>
+        <link>http://localhost:4000/replace-na-with-last-non-na-R/</link>
+        <guid isPermaLink="true">http://localhost:4000/replace-na-with-last-non-na-R/</guid>
+      </item>
     
       <item>
         <title>To face global threats, scientists need to change</title>

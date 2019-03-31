@@ -3,6 +3,8 @@
 <head>
   {% if page.header-img %}
   <meta property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.header-img }}">
   {% endif %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -14,6 +16,12 @@
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="{{ "/" | relative_url  }}feed.xml">
   <link rel="stylesheet" href="{{ "/" | relative_url  }}assets/css/highlight.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- Twitter cards -->
+  <meta name="twitter:site"    content="@{{ site.authorTwitter }}">
+  <meta name="twitter:creator" content="{{ site.author }}">
+  <meta name="twitter:title"   content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <!-- end of Twitter cards -->
 </head>
 <body>
 

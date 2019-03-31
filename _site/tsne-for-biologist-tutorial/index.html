@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta property="og:image" content="http://localhost:4000//assets/images/tsne_4.png" />
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:4000/assets/images/tsne_4.png">
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Getting started with t-SNE for biologist (R)</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- Twitter cards -->
+  <meta name="twitter:site"    content="@ajitjohnson_n">
+  <meta name="twitter:creator" content="Ajit Johnson Nirmal">
+  <meta name="twitter:title"   content="Getting started with t-SNE for biologist (R)">
+  <meta name="twitter:description" content="I am writing this tutorial assuming that you have no coding experience. By the end of this tutorial you would have generated a t-SNE plot of your own data.">
+  <!-- end of Twitter cards -->
+</head>
+<body>
+
+  <nav class="main-nav">
+
+  
+      <a href="/"> <span class="arrow">←</span> Home </a>
+  
+  
+      <a href="/about">About </a>
+  
+  
+      <a href="/media">Media </a>
+  
+
+  
+  
+
+    <a class="cta" href="https://twitter.com/ajitjohnson_n" target="_blank">Twitter</a>
+</nav>
+
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Getting started with t-SNE for biologist (R)</h1>
+        <h2 class="headline">March 29, 2019</h2>
+    </header>
+    <section id="post-body">
+        <p>Hi everyone 🙋‍♂️ With the dramatic increase in the generation of high-dimensional data (single-cell sequencing, RNA-Seq, CyToF, etc..) in biology, the need for visualizing them in a meaningful way has become increasingly important. Also if you are a pure experimental biologist with <strong>little or no coding experience</strong>, it can sometimes get quiet bothersome to consistently depend on a bio-informatician for generating these plots for your data. To be honest, several packages (think of it as software) are now available within R or Python that has made this process extremely simple.</p>
+
+<p>Like how you would click buttons within a software UI, these packages would require some basic information from you- like where is your data located? which column of your data represents the sample name? etc.. and it does the rest of the job for you.</p>
+
+<blockquote>
+  <p>I am writing this tutorial assuming that you have no coding experience and know what a t_SNE plot is. By the end of this tutorial you would have setup R, installed packages within R, generated t-SNE plot of a dummy dataset and finally generated a t-SNE plot of your own data.</p>
+</blockquote>
+
+<p>Let’s get started!</p>
+<h3 id="step-1-install-r-and-r-studio">Step-1: Install R and R studio</h3>
+<ol>
+  <li>Go to the <strong><a href="https://cran.cnr.berkeley.edu/" target="_blank">CRAN website</a></strong> and download the latest version of R for your machine (Linux, Mac or Windows). If you are using windows, the easiest setup process would be to click on the <strong>‘base’</strong> link and if you are using Mac click on the <strong>R-3.x.x.pkg</strong> link. Once it is downloaded, you install it like any other software.</li>
+  <li>Now download <strong><a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">R Studio</a></strong>. Although this is not necessary, this software will make your coding life in R much more enjoyable and easy.
+<br />
+<br />
+There is no shortage for resources in setting up R and R studio. I am going to link you to a <strong><a href="https://www.youtube.com/watch?v=lVKMsaWju8w" target="_blank">youtube video</a></strong> for you to watch if you get stuck in one of the above two steps. It also highlights many of RStudio’s capabilities over just having R on your system.
+<br />
+<br />
+    <h3 id="step-2-install-the-necessary-packages-within-r-to-generate-a-t-sne-plot">Step-2: Install the necessary packages within R to generate a t-SNE plot</h3>
+    <p>There are several packages that have implemented t-SNE. For today we are going to install a package called <strong>Rtsne</strong>. To do this- type the following within the console area of your RStudio. It might ask you to choose a server to download the package- I generally choose the one that is closest to me.</p>
+  </li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s">"Rtsne"</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/assets/images/tsne_1.PNG" alt="Installing TSNE package" /></p>
+
+<h3 id="step-3-generate-a-t-sne-plot-with-dummy-data">Step-3: Generate a t-SNE plot with dummy data</h3>
+<p>An interesting fact about R is that it comes with a number of inbuilt datasets. You can view them by typing ‘data()’ into your console. For today we are going to use one of those datasets to build a t-SNE plot. The dataset that we are going to use is called ‘IRIS’</p>
+
+<p>The iris dataset contains four measurements (Sepal Length, Sepal Width, Petal Length, Petal Width) for 150 flowers representing three species (Iris setosa, versicolor and virginica) of IRIS. You can take a look at the data yourself by typing ‘iris’ into your console. Below is the expected output.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;</span> <span class="n">iris</span>
+    <span class="n">Sepal</span><span class="o">.</span><span class="n">Length</span> <span class="n">Sepal</span><span class="o">.</span><span class="n">Width</span> <span class="n">Petal</span><span class="o">.</span><span class="n">Length</span> <span class="n">Petal</span><span class="o">.</span><span class="n">Width</span>    <span class="n">Species</span>
+            <span class="mf">5.1</span>         <span class="mf">3.5</span>          <span class="mf">1.4</span>         <span class="mf">0.2</span>     <span class="n">setosa</span>
+            <span class="mf">4.9</span>         <span class="mf">3.0</span>          <span class="mf">1.4</span>         <span class="mf">0.2</span>     <span class="n">setosa</span>
+            <span class="mf">4.7</span>         <span class="mf">3.2</span>          <span class="mf">1.3</span>         <span class="mf">0.2</span>     <span class="n">setosa</span>
+            <span class="mf">4.6</span>         <span class="mf">3.1</span>          <span class="mf">1.5</span>         <span class="mf">0.2</span>     <span class="n">setosa</span>
+            <span class="mf">5.0</span>         <span class="mf">3.6</span>          <span class="mf">1.4</span>         <span class="mf">0.2</span>     <span class="n">setosa</span>
+            <span class="mf">5.4</span>         <span class="mf">3.9</span>          <span class="mf">1.7</span>         <span class="mf">0.4</span>     <span class="n">setosa</span>
+            <span class="mf">4.6</span>         <span class="mf">3.4</span>          <span class="mf">1.4</span>         <span class="mf">0.3</span>     <span class="n">setosa</span>
+            <span class="mf">5.0</span>         <span class="mf">3.4</span>          <span class="mf">1.5</span>         <span class="mf">0.2</span>     <span class="n">setosa</span></code></pre></figure>
+
+<p><strong>Let’s run the t-SNE algorithm on this dataset and generate a t-SNE plot.</strong></p>
+
+<p>First load the dataset into the console (IR) and split it into two groups (in R we call it objects). The first object (IR_data) will contain the four measurements for all 150 flower and the second object (IR_species) will contain the species information. After which we load the t-SNE library, run the algorithm and plot the results as shown below.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Learning t-SNE Plotting</span>
+<span class="c">## Load dataset</span>
+<span class="n">IR</span> <span class="o">&lt;-</span> <span class="n">iris</span> <span class="c"># Loading the iris dataset into a object called IR</span>
+
+<span class="c">## Split IR into two objects: 1) containing measurements 2) containing species type</span>
+<span class="n">IR_data</span> <span class="o">&lt;-</span> <span class="n">IR</span><span class="p">[</span> <span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="c"># We are sub-setting IR object such as to include 'all rows' and columns 1 to 4.</span>
+<span class="n">IR_species</span> <span class="o">&lt;-</span> <span class="n">IR</span><span class="p">[</span> <span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="c"># We are sub-setting IR object such as to include 'all rows' and column 5.</span>
+
+<span class="c">## Load the t-SNE library</span>
+<span class="n">library</span><span class="p">(</span><span class="n">Rtsne</span><span class="p">)</span>
+
+<span class="c">## Run the t-SNE algorithm and store the results into an object called tsne_results</span>
+<span class="n">tsne_results</span> <span class="o">&lt;-</span> <span class="n">Rtsne</span><span class="p">(</span><span class="n">IR_data</span><span class="p">,</span> <span class="n">perplexity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">check_duplicates</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span> <span class="c"># You can change the value of perplexity and see how the plot changes</span>
+
+<span class="c">## Generate the t_SNE plot</span>
+<span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="c"># To plot two images side-by-side</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">tsne_results</span><span class="err">$</span><span class="n">Y</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s">"blue"</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span> <span class="mi">19</span><span class="p">,</span> <span class="n">cex</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">)</span> <span class="c"># Plotting the first image</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">tsne_results</span><span class="err">$</span><span class="n">Y</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s">"black"</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span> <span class="n">IR_species</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span> <span class="mi">21</span><span class="p">,</span> <span class="n">cex</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">)</span> <span class="c"># Second plot: Color the plot by the real species type (bg= IR_species)</span></code></pre></figure>
+
+<p><img src="/assets/images/tsne_2.PNG" alt="Plotting Dummy Data" /></p>
+
+<p>That is it. You have successfully generated your first t-SNE plot. Congratulations! As you can see from the plot above, the algorithm has grouped the flowers of the same species together based on the four features.</p>
+
+<h3 id="step-4-now-lets-try-building-a-t_sne-plot-with-our-own-data">Step-4: Now lets try building a t_SNE plot with our own data</h3>
+<p>If you think about it, the first object (IR_data) in the previous example broadly represents the kind of data you would be having (RNASeq or single-cell sequencing data). In which case you will have genes in columns and samples in  rows. It may look something like this.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;</span> <span class="n">your_data</span>
+                   <span class="n">Gene_1</span>      <span class="n">Gene_2</span>       <span class="n">Gene_3</span>      <span class="n">Gene_4</span>
+<span class="n">Sample_1</span>            <span class="mf">5.1</span>         <span class="mf">3.5</span>          <span class="mf">1.4</span>         <span class="mf">0.2</span>     
+<span class="n">Sample_2</span>            <span class="mf">4.9</span>         <span class="mf">3.0</span>          <span class="mf">1.4</span>         <span class="mf">0.2</span>     
+<span class="n">Sample_3</span>            <span class="mf">4.7</span>         <span class="mf">3.2</span>          <span class="mf">1.3</span>         <span class="mf">0.2</span>     
+<span class="n">Sample_4</span>            <span class="mf">4.6</span>         <span class="mf">3.1</span>          <span class="mf">1.5</span>         <span class="mf">0.2</span>     
+<span class="n">Sample_5</span>            <span class="mf">5.0</span>         <span class="mf">3.6</span>          <span class="mf">1.4</span>         <span class="mf">0.2</span>     </code></pre></figure>
+
+<p>I have an example single-cell RNASeq data for you. <br /></p>
+<ol>
+  <li>Expression file can be <strong><a href="https://github.com/ajitjohnson/ajitjohnson.github.io/blob/master/assets/data/tsne_tutorial/exp.csv" target="_blank">found here</a></strong>.</li>
+  <li>The cell-type annotation or meta-data can be <strong><a href="https://github.com/ajitjohnson/ajitjohnson.github.io/blob/master/assets/data/tsne_tutorial/meta.csv" target="_blank">found here</a></strong>.
+<br />
+<br />
+I have already pre-processed the data, performed a clustering analysis and identified the cell types (provided them in the meta file) based on the genes they express. Go through these two files and familiarize yourself with the their formatting.
+<br />
+<br />
+<strong>Expression file:</strong> This file should contain cells in rows and genes in columns. All rows (cells) should have a ‘unique’ cell name and all columns (genes) should also have a ‘unique’ gene name.</li>
+</ol>
+
+<p><strong>The meta-data file:</strong> should contain the same row names/ cell names and a column containing the cell-type. This file is only necessary if you would like to color your t-SNE plot based on cell-type.
+<br />
+<br />
+Open your data in excel and format it similar to the one I have provided (save as .CSV). Once you are ready, we can go ahead and generate a t-SNE plot of your own data.</p>
+
+<p>I have saved both of files in a folder called ‘tsne_tutorial’ on my desktop. So the first step is to tell R, where your files are located. We call this <em>working directory</em> in R.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Set working directory</span>
+<span class="n">setwd</span><span class="p">(</span><span class="s">"C:/Users/ajn16/Desktop/tsne_tutorial"</span><span class="p">)</span></code></pre></figure>
+
+<p>Once the directory is set, R would know where look for your files. Now let’s load your data.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Set working directory</span>
+<span class="n">expression_data</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="nb">file</span> <span class="o">=</span> <span class="s">"exp.csv"</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">','</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span> <span class="c"># This command looks for a file named 'exp.csv' within your working directory and would set the first column as row names/ cell names and the first row as column names/ gene names.</span>
+<span class="n">meta_data</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="nb">file</span> <span class="o">=</span> <span class="s">"meta.csv"</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">','</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span></code></pre></figure>
+
+<p><strong>Now we are good to go. Lets run the t_SNE algorithm and generate a plot as we did previously.</strong></p>
+
+<blockquote>
+  <p>If you get any error at this point, it probably because your data is not in the right-format. Go back and check if they are okay.</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Run the t-SNE algorithm and store the results into an object called tsne_results</span>
+<span class="n">tsne_realData</span> <span class="o">&lt;-</span> <span class="n">Rtsne</span><span class="p">(</span><span class="n">expression_data</span><span class="p">,</span> <span class="n">perplexity</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">check_duplicates</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span></code></pre></figure>
+
+<p>The above step may take a while depending on the size of your dataset. There are quicker options like UMAP which is also slightly better in other ways in maintaining the global architecture of the clusters. If you would like to learn that, let me know in the comments.</p>
+
+<p><em>Okay we are now ready for the final step!</em></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## Generate the t_SNE plot</span>
+<span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">tsne_realData</span><span class="err">$</span><span class="n">Y</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s">"blue"</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span> <span class="mi">19</span><span class="p">,</span> <span class="n">cex</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">tsne_realData</span><span class="err">$</span><span class="n">Y</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s">"black"</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span> <span class="n">meta_data</span><span class="err">$</span><span class="n">louvain</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span> <span class="mi">21</span><span class="p">,</span> <span class="n">cex</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/assets/images/tsne_3.PNG" alt="t_SNE plot of single cell data" /></p>
+
+<p>There we have it. In this case,</p>
+<ol>
+  <li>Green is <strong>CD4 T cells</strong></li>
+  <li>Blue is <strong>CD8 T cells</strong></li>
+  <li>Grey is <strong>NK cells</strong></li>
+  <li>Red is <strong>CD14 + Monocytes</strong></li>
+  <li>Magenta is <strong>FCGR3A+ Monocytes</strong></li>
+  <li>Black is <strong>B cells</strong></li>
+  <li>Cyan is <strong>Dendritic cells</strong></li>
+  <li>Yellow is <strong>Megakaryocytes</strong>
+<br />
+<br />
+Hope you successfully generated your own t-SNE plot. If you have an questions or found any particular step difficult to follow, please do let me know in the comments. You might eventually google and figure it out, however, if it took you a while to do so, probably someone else is facing a similar situation as well. So please do let me know and I will update the article to make it more enjoyable for every one.
+<br />
+<br />
+PS- If you have single-cell RNASeq data, I would recommend using some single-cell specific packages such as <strong><a href="https://satijalab.org/seurat/" target="_blank">seurat</a></strong> in R or <strong><a href="https://scanpy.readthedocs.io/en/stable/" target="_blank">ScanPy</a></strong> in python to do your analysis. They include everything from data-processing, clustering and generating plots such as these within them. It will make your life a lot easier.</li>
+</ol>
+
+<p>Bye for now! Have a nice day 😊</p>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/ajitjohnson_n">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Ajit Johnson Nirmal</span>
+            <span>Cancer Geneticist,<a href="https://scholar.harvard.edu/ajitjohnson" target="_blank"> Harvard University </a>| Voicing for evidence based policies to preserve our species for another million years.</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https://ajitjohnson.com/tsne-for-biologist-tutorial/ - Getting started with t-SNE for biologist (R) by @ajitjohnson_n"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_shortname = 'ajitjohnson-com';
+var disqus_developer = 0; // developer mode is on
+var disqus_config = function () {
+this.page.url = 'http://localhost:4000/tsne-for-biologist-tutorial/';
+this.page.identifier = '/tsne-for-biologist-tutorial';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://ajitjohnson-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+    </div>
+
+
+<!-- Archive post list -->
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-87347639-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

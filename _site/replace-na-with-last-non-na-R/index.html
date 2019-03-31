@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>R- Update or replace NA with adjacent column values or last non-NA value</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- Twitter cards -->
+  <meta name="twitter:site"    content="@ajitjohnson_n">
+  <meta name="twitter:creator" content="Ajit Johnson Nirmal">
+  <meta name="twitter:title"   content="R- Update or replace NA with adjacent column values or last non-NA value">
+  <meta name="twitter:description" content="Fill missing values using last or previous observation- A quick vectorized alternative to looping over a data-frame for replacing NA.">
+  <!-- end of Twitter cards -->
+</head>
+<body>
+
+  <nav class="main-nav">
+
+  
+      <a href="/"> <span class="arrow">←</span> Home </a>
+  
+  
+      <a href="/about">About </a>
+  
+  
+      <a href="/media">Media </a>
+  
+
+  
+  
+
+    <a class="cta" href="https://twitter.com/ajitjohnson_n" target="_blank">Twitter</a>
+</nav>
+
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>R- Update or replace NA with adjacent column values or last non-NA value</h1>
+        <h2 class="headline">March 24, 2019</h2>
+    </header>
+    <section id="post-body">
+        <p>Recently I had a data-frame which contained empty/missing values. It’s not uncommon to find yourself with missing values (i.e. NAs), especially in time series. This may be the result of a data omission or some mathematical or merge operation you do on your data. Zoo package provides a variety of functions to handle missing data.</p>
+
+<p>Say I had a dataframe that looks like the one below,</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">col1</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">col2</span>  <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="n">NA</span><span class="p">,</span> <span class="n">NA</span> <span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="n">NA</span><span class="p">))</span>
+
+  <span class="n">col1</span> <span class="n">col2</span>
+<span class="mi">1</span>    <span class="mi">1</span>    <span class="n">a</span>
+<span class="mi">2</span>    <span class="mi">2</span> <span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span>
+<span class="mi">3</span>    <span class="mi">3</span> <span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span>
+<span class="mi">4</span>    <span class="mi">4</span>    <span class="n">b</span>
+<span class="mi">5</span>    <span class="mi">5</span> <span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span></code></pre></figure>
+
+<p>I want to fill in the NA values with the last known non-NA value from that column. So I want the data frame to look like this</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="mi">1</span>    <span class="mi">1</span>    <span class="n">a</span>
+<span class="mi">2</span>    <span class="mi">2</span>    <span class="n">a</span>
+<span class="mi">3</span>    <span class="mi">3</span>    <span class="n">a</span>
+<span class="mi">4</span>    <span class="mi">4</span>    <span class="n">b</span>
+<span class="mi">5</span>    <span class="mi">5</span>    <span class="n">b</span></code></pre></figure>
+
+<p>You could loop through each row and identify rows that have an NA and replace it with the previous value but thankfully there is a much faster alternative. Especially if you are like me who works with millions of data-points, this is a life saver. I came across the na.locf() function in the zoo library which does the job. This function takes the last observation carried forward approach. In most circumstances this is the correct thing to do. It both preserves the last known value and prevents any look-ahead bias from entering into the data. You can also apply next observation carried backward by setting fromLast = TRUE.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">library</span><span class="p">(</span><span class="n">zoo</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+
+<span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">col1</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">col2</span>  <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="n">NA</span><span class="p">,</span> <span class="n">NA</span> <span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="n">NA</span><span class="p">))</span>
+
+<span class="c">## Apply function</span>
+
+<span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">na</span><span class="o">.</span><span class="n">locf</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
+
+  <span class="n">col1</span> <span class="n">col2</span>
+<span class="mi">1</span>    <span class="mi">1</span>    <span class="n">a</span>
+<span class="mi">2</span>    <span class="mi">2</span>    <span class="n">a</span>
+<span class="mi">3</span>    <span class="mi">3</span>    <span class="n">a</span>
+<span class="mi">4</span>    <span class="mi">4</span>    <span class="n">b</span>
+<span class="mi">5</span>    <span class="mi">5</span>    <span class="n">b</span></code></pre></figure>
+
+<p>Unfortunately, na.locf() only on columns. But what if you would want to apply it to rows? In this case, you can use an apply function to apply the na.locf() on all rows.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">## We use data.frame because apply function returns a matrix</span>
+<span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="nb">apply</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">na</span><span class="o">.</span><span class="n">locf</span><span class="p">)))</span></code></pre></figure>
+
+<p>It’s quite a neat function and certainly comes in helpful when cleaning up data sets which don’t tend to be as uniform as you’d hope! Hope this was helpful.</p>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/ajitjohnson_n">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Ajit Johnson Nirmal</span>
+            <span>Cancer Geneticist,<a href="https://scholar.harvard.edu/ajitjohnson" target="_blank"> Harvard University </a>| Voicing for evidence based policies to preserve our species for another million years.</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https://ajitjohnson.com/replace-na-with-last-non-na-R/ - R- Update or replace NA with adjacent column values or last non-NA value by @ajitjohnson_n"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_shortname = 'ajitjohnson-com';
+var disqus_developer = 0; // developer mode is on
+var disqus_config = function () {
+this.page.url = 'http://localhost:4000/replace-na-with-last-non-na-R/';
+this.page.identifier = '/replace-na-with-last-non-na-R';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://ajitjohnson-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+    </div>
+
+
+<!-- Archive post list -->
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-87347639-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
