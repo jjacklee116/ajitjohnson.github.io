@@ -19,7 +19,7 @@ The news media, like all forms of entertainment, is constantly trying to gain a 
 
 So what can we do to minimize the spread of misinformation and consequent indoctrination? The general public can’t be blamed for science being too technical or risk waiting for a change among science writers or the newspapers that are constantly in need of new, sexy studies to report. Fortunately, many scientists can instantly tell apart a news piece that has been misrepresented or hyped and if we can reproduce their thought process, maybe we can make a difference.
 
-###So I am going to prep you up to read and share Science like a Scientist.
+### So I am going to prep you up to read and share Science like a Scientist.
 
 Based on my scientific training and personal experience, I hope to give you an understanding of how science works, highlighting the most common limitations that the media does not report. Hopefully, by knowing this, you can make a more informed judgment when reading your next science-related news article.
 
