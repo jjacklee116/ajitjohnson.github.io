@@ -2,7 +2,7 @@
 title:  "What most media doesn't tell you on reporting science"
 date:   2019-03-31 10:18:00
 comments: true
-description: I am going to prep you up to read and share Science like a Scientist.
+description: The lack of first-hand interpretation of the study, coupled with sensationalism, exaggeration and hype results in the indoctrination of common people with misleading information.
 categories: ['science communication']
 tags: ['research summary', 'educational']
 header-img: "/assets/images/sc.jpeg"
