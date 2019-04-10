@@ -7,7 +7,7 @@ categories: ['science communication']
 tags: ['Black Hole', 'M87 Event Horizon', 'Albert Einstein']
 header-img: "/assets/images/Black_hole_M87_2.jpg"
 ---
-One hundred years ago (1915), one man (Albert Einstein) proposed a extremely bazaar idea, unlike, any fiction one could think of- **BLACK HOLE**, a place in space where all laws of physics break down and a point of no-return, where even light cannot escape. Beyond mathematical formulas that proposes its existence, it was difficult to verify Einstein's claims as it is not easy to photograph a black hole because they are entirely dark and featureless. Nothing can escape a black hole (hence the name), not even light.
+One hundred years ago (1915), one man (Albert Einstein) proposed a extremely bazaar idea, unlike, any fiction one could think of- **BLACK HOLE**, a place in space where all laws of physics break down and a point of no-return, where even light cannot escape. Beyond mathematical formulas that proposes its existence, it was difficult to verify Einstein's claims as it is not easy to photograph a black hole. This is because they are entirely dark and featureless. Nothing can escape a black hole (hence the name), not even light.
 
 > **Today, 100 years later, with over 200 scientists working on it from 40 different countries spending close to 50 million dollars have finally captured the first ever real image of a black hole. A huge breakthrough for humanity.**
 
