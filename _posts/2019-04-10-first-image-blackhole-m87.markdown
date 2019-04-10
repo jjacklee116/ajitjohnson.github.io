@@ -21,8 +21,6 @@ What you see is the shadow of the black hole. The bright halo is caused by super
 
 Although they are relatively simple objects, black holes raise some of the most complex questions about the nature of space and time, and ultimately of our existence. It is remarkable that the image we observe is so similar to that which we obtain from our theoretical calculations. So far, it looks like Einstein is correct once again. But having the first image will enable researchers to learn more about these mysterious objects. They will be keen to look out for ways in which the black hole departs from what's expected in physics. No-one really knows how the bright ring around the hole is created. Even more intriguing is the question of what happens when an object falls into a black hole.
 
-Lastly, this is personally extremely exciting to me because, this observation once again validates the faith in science. It shows that we can accurately make predictions, experiment and validate it in a reproducible manner.
-
 Below are the five publications that describes the black hole- All of them were published at *the astrophysical journal letters.*
 
 - [First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole](https://iopscience.iop.org./article/10.3847/2041-8213/ab0ec7){:target="_blank"}
@@ -30,3 +28,5 @@ Below are the five publications that describes the black hole- All of them were 
 - [First M87 Event Horizon Telescope Results. IV. Imaging the Central Supermassive Black Hole](https://iopscience.iop.org/article/10.3847/2041-8213/ab0e85){:target="_blank"}
 - [First M87 Event Horizon Telescope Results. III. Data Processing and Calibration](https://iopscience.iop.org/article/10.3847/2041-8213/ab0c57){:target="_blank"}
 - [First M87 Event Horizon Telescope Results. II. Array and Instrumentation](https://iopscience.iop.org/article/10.3847/2041-8213/ab0c96){:target="_blank"}
+
+Before we depart our ways let me just add one last thing. This is personally extremely exciting to me because, this observation once again validates the faith in science. It shows that we can accurately make predictions, experiment and validate it in a reproducible manner. Have a nice day ☺
