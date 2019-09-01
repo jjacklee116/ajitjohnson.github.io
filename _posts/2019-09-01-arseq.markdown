@@ -1,0 +1,48 @@
+---
+title:  "RNASeq analysis in 5 lines of code"
+date:   2019-09-01 10:00:00
+comments: true
+description: An easy to use R package for automated basic RNASeq analysis with minimal coding requirement. This package is designed to be used by biologists with little to no coding experience.
+categories: ['R']
+tags: ['coding', 'educational', 'Tutorial', 'RNASeq']
+header-img: "/assets/images/Black_hole_M87_2.jpg"
+---
+Two words- **“It’s easy”**. 
+
+I often tell my colleagues that the hardest part of any RNASeq analysis is really to put the pieces together to tease out the biological insights.
+
+Having said that, lets dive right in. This article will cover everything you need to know to do your own RNASeq analysis.  
+
+## What you’ll learn
+- Identifying the most variably expressed genes in your data
+- Visualising the most variable set of genes as a heatmap   
+- Performing Differential gene expression analysis
+- Visualising the differentially expressed genes as a heatmap
+- Performing GO enrichment analysis on the differentially expressed genes
+- Visualising the top 5 GO terms
+- Performing KEGG pathway analysis on the differentially expressed genes
+- Again Visualising the enriched KEGG pathways
+- Finally Performing GSEA analysis and Visualising the enriched gene sets.
+
+I’m excited to show you all this and spoilers, I’ve done most of the work so that you can do all the above in just a few lines of R code.
+
+![Let’s GO](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
+## Let’s get started
+### Set up R
+If you have never worked with R programming, naturally you will need to set that up first. I highly recommend R studio as well on top of R. Most of you would have all that set up already but if you don’t- here is what you would need to do.
+
+![Set Up R](https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif)
+
+### What do you need?
+There are two files that you need to start the analysis.
+- The counts table
+- A meta data file which has information about your sample groups.
+
+For this task, I am going to assume that you have the counts table ready- i.e your samples have been aligned (using, for example, Tophat) and counted using tools like HTSeq. Counts table is the un-normalised data where transcripts/genes are in rows and samples are in columns.
+
+So that leaves us with the meta data file. It is nothing but a .csv file with the first column being your sample names (same as the counts table and in the same order) and the second column specifying what group do they belong to (e.g: control or treatment).
+
+Another important aspect to note is that your counts table should contain gene names (not transcript ID, entrez ID or any other kind of ID’s). Don’t freak out if your counts table does not have Gene ID’s yet. I will show you how you can convert between ID’s.
+
+PS- If you would like to learn how to go from FASTQ files to counts table, let me know in the comments below and I will write about it. Head up- it is easy as well.
