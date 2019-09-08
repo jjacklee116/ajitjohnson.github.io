@@ -23,7 +23,7 @@ I am here to make that part as easy as possible for you guys so that you can foc
 - PCA Eigenvectors
 - Multidimensional scaling (MDS) analysis
 - Identify the most variable genes
-
+<br>
 **Analysis between groups of interest:**
 - Differential gene expression analysis using DESeq2
 - Volcano Plot of differentially expressed genes
@@ -36,7 +36,7 @@ I am here to make that part as easy as possible for you guys so that you can foc
 - KEGG pathway enrichment of the differentially expressed genes
 - KEGG pathway diagrams of the top 5 enriched pathways
 - GSEA analysis (H, C1, C2, C3, C4, C5, C6, C7 genesets)
-
+<br>
 It took me a solid few weekends to write this package and I’m super excited to share it with you guys and learn how many gazillion hours it saves you on your analysis.
 
 ![That’s me being excited for you guys](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
@@ -54,7 +54,7 @@ If you have never worked with R programming, naturally you will need to set that
 There are two files that you need to start the analysis.
 1. `Counts table`
 2. `Meta data` file
-
+<br>
 For this task, I am going to assume that you have the `counts table` ready. Counts table is the un-normalised data where transcripts/genes are in rows and samples are in columns.
 
 The package currently supports gene names and ENSEMBLE id’s. If you have gene names (HUGO) as identifiers, please make sure that the various transcripts have been summarised into a single unique gene (I recommend summing them). Below is an example of a counts table.
@@ -87,11 +87,11 @@ The package requires a lot of dependencies and so it is probably going to take a
 Following installation, we are going to load the package, set the working directory and then load your data into the R environment. `Working directory` is nothing but the path to the folder which contains your counts table and meta data files. Let’s go ahead and do that with the following lines of code.
 
 ```R
-# Load the package
+#Load the package
 
 library("arseq")
 
-# Set the working directory (path to the folder of where your data is located)
+#Set the working directory (path to the folder of where your data is located)
 
 setwd("\path to the folder \of where your data is located\")
 

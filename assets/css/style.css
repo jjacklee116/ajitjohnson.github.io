@@ -239,12 +239,14 @@ em, i { font-style: italic; }
 	margin-bottom: 20px;
 	color: #222;
 	font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
+	font-weight: bold;
 }
 
 .post h2 {
 	margin-bottom: 40px;
 	  font: 300 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
 	  color: #111;
+		font-weight: bold;
 }
 
 
