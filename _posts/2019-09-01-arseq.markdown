@@ -13,7 +13,7 @@ Everyone has their unique way of analysing their data, however, there are a numb
 
 I am here to make that part as easy as possible for you guys so that you can focus on interpreting the results rather than generating them, in hopes it will speed up biological discoveries and advance science in a much faster pace.
 
-	Staying true to these words, I present to you `irseq`, an automated RNASeq analysis pipeline (R package) that will empower you to perform a plethora of analysis in 5 lines of code.
+> Staying true to these words, I present to you `irseq`, an automated RNASeq analysis pipeline (R package) that will empower you to perform a plethora of analysis in 5 lines of code.
 
 ## What can `arseq` do?
 **Over all data structure analysis (all samples):**
@@ -77,7 +77,7 @@ Awesome! We have all we need to begin the RNASeq analysis.
 
 First lets install the `arseq` package in R. The package requires a minimum R version of 3.4 and so if you haven’t used R in a while, I first suggest updating it to the latest version and then running the following command in the R console to install ‘arseq`.
 
-```YAML
+```R
 if( !require(devtools) ) install.packages("devtools")
 devtools::install_github( "ajitjohnson/arseq", INSTALL_opts = "--no-multiarch")
 ```
@@ -86,7 +86,7 @@ The package requires a lot of dependencies and so it is probably going to take a
 
 Following installation, we are going to load the package, set the working directory and then load your data into the R environment. `Working directory` is nothing but the path to the folder which contains your counts table and meta data files. Let’s go ahead and do that with the following lines of code.
 
-```YAML
+```R
 # Load the package
 
 library("arseq")
@@ -158,7 +158,7 @@ At the minimum you should have at least one variable, i.e. the column name of th
 
 Okay, now that we know about both the additional arguments (`contrast & design`), we can run the analysis!
 
-```YAML
+```R
 # Run the analysis for scenario-1: Identify the differentially expressed genes between control samples and samples treated with drug-A
 
 arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A = c("control"), B= c("drug-A")))
@@ -176,7 +176,7 @@ If you do not include this argument, it is not the end of the world. `arseq` wou
 
 By default, `arseq` would identify the top 1000 most variable genes, if you would like to change this, you can pass in an additional argument called `variable.genes = 500` with the number of variable genes that you would like to compute. In this case, 500.
 
-```YAML
+```R
 # For changing the number of variable genes needed
 
 arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A = c("control"), B= c("drug-A")),variable.genes = 500)
@@ -192,26 +192,26 @@ If you now go to the folder where your data was, your will find a new folder nam
 
 **Folder structure**
 
-	ARSeq
-	- General stats
+ARSeq
+- General stats
 		- PCA plot, PCA eigen vectors, MDS plot, most variable genes, heatmap of the most variable genes and Euclidean and Poisson distance plots.
-	- [comparison 1] e.g. control vs drug-A
+- [comparison 1] e.g. control vs drug-A
 		- Differential expression
-			- .CSV file containing the fold change and p.values
-			- Heatmap of the differentially expressed genes
+			 - .CSV file containing the fold change and p.values
+			 - Heatmap of the differentially expressed genes
 		- GO enrichment analysis
-			- Enriched GO terms sorted by p.value
-			- Top 5 GO terms plot
+  			- Enriched GO terms sorted by p.value
+  			- Top 5 GO terms plot
 		- GSEA analysis
-			- Excel sheet with multiple tabs corresponding to the various gene sets from MSigDB
-			- Top 10 enriched term from each category plot
+  			- Excel sheet with multiple tabs corresponding to the various gene sets from MSigDB
+  			- Top 10 enriched term from each category plot
 		- KEGG pathway enrichment
-			- .CSV file containing the most up regulated pathways
-			- .CSV file containing the most down regulated pathways
-			- Top 10 enriched pathways plot
-			- Pathway diagrams
-				- If there are significantly enriched pathways, the pathway diagram of the top 5 will be saved in this folder
+  			- .CSV file containing the most up regulated pathways
+  			- .CSV file containing the most down regulated pathways
+  			- Top 10 enriched pathways plot
+  			- Pathway diagrams
+  				- If there are significantly enriched pathways, the pathway diagram of the top 5 will be saved in this folder
 		- Sample relation plots
-			-  PCA plot, PCA eigen vectors, MDS plot, volcano plot and Euclidean and Poisson distance plots.
+  			-  PCA plot, PCA eigen vectors, MDS plot, volcano plot and Euclidean and Poisson distance plots.
 
 For each comparison/contrasts that you perform, a new folder will be created within the ARSeq folder. If you perform the same contrast again, the old results will be overwritten.
