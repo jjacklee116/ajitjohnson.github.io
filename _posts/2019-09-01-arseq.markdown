@@ -86,7 +86,7 @@ The package requires a lot of dependencies and so it is probably going to take a
 
 Following installation, we are going to load the package, set the working directory and then load your data into the R environment. `Working directory` is nothing but the path to the folder which contains your counts table and meta data files. Let’s go ahead and do that with the following lines of code.
 
-```
+```R
 # Load the package
 
 library("arseq")
