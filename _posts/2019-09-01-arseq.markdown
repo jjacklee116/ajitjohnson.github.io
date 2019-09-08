@@ -86,7 +86,7 @@ The package requires a lot of dependencies and so it is probably going to take a
 
 Following installation, we are going to load the package, set the working directory and then load your data into the R environment. `Working directory` is nothing but the path to the folder which contains your counts table and meta data files. Let’s go ahead and do that with the following lines of code.
 
-```R
+```
 # Load the package
 
 library("arseq")
@@ -192,26 +192,26 @@ If you now go to the folder where your data was, your will find a new folder nam
 
 **Folder structure**
 
-ARSeq
-- General stats
-		- PCA plot, PCA eigen vectors, MDS plot, most variable genes, heatmap of the most variable genes and Euclidean and Poisson distance plots.
-- [comparison 1] e.g. control vs drug-A
-		- Differential expression
-			 - .CSV file containing the fold change and p.values
-			 - Heatmap of the differentially expressed genes
-		- GO enrichment analysis
-  			- Enriched GO terms sorted by p.value
-  			- Top 5 GO terms plot
-		- GSEA analysis
-  			- Excel sheet with multiple tabs corresponding to the various gene sets from MSigDB
-  			- Top 10 enriched term from each category plot
-		- KEGG pathway enrichment
-  			- .CSV file containing the most up regulated pathways
-  			- .CSV file containing the most down regulated pathways
-  			- Top 10 enriched pathways plot
-  			- Pathway diagrams
-  				- If there are significantly enriched pathways, the pathway diagram of the top 5 will be saved in this folder
-		- Sample relation plots
-  			-  PCA plot, PCA eigen vectors, MDS plot, volcano plot and Euclidean and Poisson distance plots.
+  ARSeq
+  - General stats
+  		- PCA plot, PCA eigen vectors, MDS plot, most variable genes, heatmap of the most variable genes and Euclidean and Poisson distance plots.
+  - [comparison 1] e.g. control vs drug-A
+  		- Differential expression
+  			 - .CSV file containing the fold change and p.values
+  			 - Heatmap of the differentially expressed genes
+  		- GO enrichment analysis
+    			- Enriched GO terms sorted by p.value
+    			- Top 5 GO terms plot
+  		- GSEA analysis
+    			- Excel sheet with multiple tabs corresponding to the various gene sets from MSigDB
+    			- Top 10 enriched term from each category plot
+  		- KEGG pathway enrichment
+    			- .CSV file containing the most up regulated pathways
+    			- .CSV file containing the most down regulated pathways
+    			- Top 10 enriched pathways plot
+    			- Pathway diagrams
+    				- If there are significantly enriched pathways, the pathway diagram of the top 5 will be saved in this folder
+  		- Sample relation plots
+    			-  PCA plot, PCA eigen vectors, MDS plot, volcano plot and Euclidean and Poisson distance plots.
 
 For each comparison/contrasts that you perform, a new folder will be created within the ARSeq folder. If you perform the same contrast again, the old results will be overwritten.
