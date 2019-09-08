@@ -76,6 +76,14 @@ h2 {
 	margin: 0 auto;
 }
 
+.code {
+    background-color: #e6e6e6;
+    padding-right: 3px;
+    border-radius: 3px;
+    padding-left: 3px;
+    font-family: monospace;
+}
+
 .profile #header {
 	border-bottom: 1px solid #eee;
 	margin-bottom: 40px;
@@ -298,16 +306,15 @@ pre	{
 	white-space:pre-wrap;
 	/*border: 1px solid #ddd;*/
 	padding:20px;
-	background-color:#fdfdfd;
+	background-color:#f2f2f2;
 	/*font-size:14px;*/
 	overflow:auto;
 	border-radius: 3px;
-	background: #272b2d;
-	  font-family: 'Source Code Pro',Menlo,monospace;
-	  font-size: 13px;
-	  line-height: 1.5em;
-	  font-weight: 500;
-	color: #d0d4d7;
+	font-family: 'Source Code Pro',Menlo,monospace;
+	font-size: 13px;
+	line-height: 1.5em;
+	font-weight: 500;
+	color: #000000;
 
 }
 
