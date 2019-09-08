@@ -192,6 +192,7 @@ If you now go to the folder where your data was, your will find a new folder nam
 
 **Folder structure**
 
+```
   ARSeq
   - General stats
   		- PCA plot, PCA eigen vectors, MDS plot, most variable genes, heatmap of the most variable genes and Euclidean and Poisson distance plots.
@@ -213,5 +214,6 @@ If you now go to the folder where your data was, your will find a new folder nam
     				- If there are significantly enriched pathways, the pathway diagram of the top 5 will be saved in this folder
   		- Sample relation plots
     			-  PCA plot, PCA eigen vectors, MDS plot, volcano plot and Euclidean and Poisson distance plots.
+```
 
 For each comparison/contrasts that you perform, a new folder will be created within the ARSeq folder. If you perform the same contrast again, the old results will be overwritten.

@@ -13,7 +13,7 @@
 
 .hljs-shebang,
 .hljs-comment {
-  color: #777279;
+  color: #C0C0C0;
 }
 
 .hljs-keyword,
@@ -22,7 +22,7 @@
 .hljs-request,
 .hljs-status,
 .clojure .hljs-attribute {
-  color: #ebde68;
+  color: #8B0000;
 }
 
 .hljs-sub .hljs-keyword,
@@ -40,7 +40,7 @@
 .apache .hljs-cbracket,
 .hljs-date,
 .coffeescript .hljs-attribute {
-  color: #c1ef65;
+  color: #000000;
 }
 
 .hljs-subst {
@@ -71,7 +71,7 @@
 .vbscript,
 .hljs-literal,
 .hljs-name {
-  color: #77bcd7;
+  color: #00008b;
 }
 
 .css .hljs-tag {
