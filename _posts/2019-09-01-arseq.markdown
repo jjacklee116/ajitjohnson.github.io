@@ -220,7 +220,7 @@ If you now go to the folder where your data was, your will find a new folder nam
 
 <br>
 For each comparison/contrasts that you perform, a new folder will be created within the ARSeq folder. If you perform the same contrast again, the old results will be overwritten.
-<br>
+<br><br>
 Hope you successfully analysed your own RNASeq data. If you have an questions or found any particular step difficult to follow, please do let me know in the comments. You might eventually google and figure it out, however, if it took you a while to do so, probably someone else is facing a similar situation as well. So please do let me know and I will update the article to make it more enjoyable for every one.
 
 
