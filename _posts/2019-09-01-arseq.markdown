@@ -114,7 +114,7 @@ Common **errors** at this step could include,
 1. Your files are not in .csv format. This is fine but then you need to look up online on how to import your specific file format into R. For example, if your file is in `.txt` format, you would use `read.table` instead of `read.csv`. An easier alternative is to open your file in excel and save as .csv file. Having said that, please make sure that excel does not convert your gene names into dates. This is a usual bug and I generally find these and remove them manually. If you do not do this, R is going to complain saying that there are duplicates in your file.<br>
 2. The second most common error is to have duplicates in the first column of your data files. In the `counts table` that would be the gene names and in the `meta data` file, it would be the sample names. Please make sure these are unique and not duplicated in any way.
 
-If everything worked, we are good to go. Now lets get ready to run the analysis. There is two more thing you need to know before you can run the analysis.
+If everything worked, we are good to go. **Now lets get ready to run the analysis.** There is two more thing you need to know before you can run the analysis.
 
 	1. Contrast argument
 	2. Design argument
