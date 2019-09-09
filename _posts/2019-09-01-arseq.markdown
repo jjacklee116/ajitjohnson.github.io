@@ -1,11 +1,11 @@
 ---
-title:  "RNASeq analysis in 5 lines of code"
+title:  "RNASeq analysis in 5 lines of code (ARSeq)"
 date:   2019-09-01 10:00:00
 comments: true
-description: An easy to use R package for automated basic RNASeq analysis with minimal coding requirement. This package is designed to be used by biologists with little to no coding experience.
+description: An easy to use R package for automated RNASeq analysis. This package is designed to be used by biologists with little to no coding experience.
 categories: ['R']
 tags: ['coding', 'educational', 'Tutorial', 'RNASeq']
-header-img: "/assets/images/Black_hole_M87_2.jpg"
+header-img: "/assets/images/arseq.png"
 ---
 When it comes to analysing RNASeq data, it can sometimes get quiet intimidating, especially when you are not a computational biologist.
 
@@ -220,3 +220,8 @@ If you now go to the folder where your data was, your will find a new folder nam
 
 <br>
 For each comparison/contrasts that you perform, a new folder will be created within the ARSeq folder. If you perform the same contrast again, the old results will be overwritten.
+<br>
+Hope you successfully analysed your own RNASeq data. If you have an questions or found any particular step difficult to follow, please do let me know in the comments. You might eventually google and figure it out, however, if it took you a while to do so, probably someone else is facing a similar situation as well. So please do let me know and I will update the article to make it more enjoyable for every one.
+
+
+Bye for now! Have a nice day 😊
