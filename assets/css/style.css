@@ -3,9 +3,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .highlighter-rouge {
-	background-color: #e6e6e6;
+	background-color: #eff2f6;
 	padding-right: 3px;
-	border-radius: 3px;
+	border-radius: 4px;
 	padding-left: 3px;
 	font-family: monospace;
 }
