@@ -198,25 +198,25 @@ If you now go to the folder where your data was, your will find a new folder nam
 
 **ARSeq**
 1. **General stats**<br>
-    PCA plot, PCA eigen vectors, MDS plot, most variable genes, heatmap of the most variable genes and Euclidean and Poisson distance plots.
+  PCA plot, PCA eigen vectors, MDS plot, most variable genes, heatmap of the most variable genes and Euclidean and Poisson distance plots.
 2. **[comparison 1] e.g. control vs drug-A**<br>
-   **Differential expression**<br>
-    - .CSV file containing the fold change and p.values
-    - Heatmap of the differentially expressed genes<br>
-    **GO enrichment analysis**<br>
-    - Enriched GO terms sorted by p.value
-    - Top 5 GO terms plot<br>
-    **GSEA analysis**<br>
-    - Excel sheet with multiple tabs corresponding to the various gene sets from MSigDB
-    - Top 10 enriched term from each category plot<br>
-    **KEGG pathway enrichment**<br>
-    - .CSV file containing the most up regulated pathways
-    - .CSV file containing the most down regulated pathways
-    - Top 10 enriched pathways plot
-    - Pathway diagrams
-    - If there are significantly enriched pathways, the pathway diagram of the top 5 will be saved in this folder<br>
-    **Sample relation plots**<br>
-    - PCA plot, PCA eigen vectors, MDS plot, volcano plot and Euclidean and Poisson distance plots.
+  **Differential expression**<br>
+  - .CSV file containing the fold change and p.values
+  - Heatmap of the differentially expressed genes<br>
+  **GO enrichment analysis**<br>
+  - Enriched GO terms sorted by p.value
+  - Top 5 GO terms plot<br>
+  **GSEA analysis**<br>
+  - Excel sheet with multiple tabs corresponding to the various gene sets from MSigDB
+  - Top 10 enriched term from each category plot<br>
+  **KEGG pathway enrichment**<br>
+  - .CSV file containing the most up regulated pathways
+  - .CSV file containing the most down regulated pathways
+  - Top 10 enriched pathways plot
+  - Pathway diagrams
+  - If there are significantly enriched pathways, the pathway diagram of the top 5 will be saved in this folder<br>
+  **Sample relation plots**<br>
+  - PCA plot, PCA eigen vectors, MDS plot, volcano plot and Euclidean and Poisson distance plots.
 
 
 For each comparison/contrasts that you perform, a new folder will be created within the ARSeq folder. If you perform the same contrast again, the old results will be overwritten.
