@@ -92,19 +92,15 @@ Following installation, we are going to load the package, set the working direct
 
 ```R
 ## Loading the package to R environment
-
 library("arseq")
 
 ## Change the working directory (path to the folder of where your data is located)
-
 setwd("\path to the folder \of where your data is located\")
 
-## Load your counts table into R, remember to change `counts_table.csv` with your file name
-
+## Loading counts table into R, remember to change counts_table.csv with your file name
 my_data <- read.csv("counts_table.csv", row.names = 1, header = T)
 
-## Load your meta data into R and remember to replace `meta_data.csv` with your file name
-
+## Loading meta data into R, remember to replace meta_data.csv with your file name
 my_meta <- read.csv("meta_data.csv", row.names = 1, header = T)
 ```
 
@@ -179,9 +175,8 @@ If you do not include this argument, it is not the end of the world. `arseq` wou
 By default, `arseq` would identify the top 1000 most variable genes, if you would like to change this, you can pass in an additional argument called `variable.genes = 500` with the number of variable genes that you would like to compute. In this case, 500.
 
 ```R
-## For changing the number of variable genes needed
-
-arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A = c("control"), B= c("drug-A")),variable.genes = 500)
+## In order to change the number of most variable genes that you need
+arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A = c("control"), B= c("drug-A")), variable.genes = 500)
 ```
 
 If you followed these through well done! You have successfully completed your first `arseq` analysis.
