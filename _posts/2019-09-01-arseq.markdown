@@ -23,7 +23,7 @@ I am here to make that part as easy as possible for you guys so that you can foc
 - PCA Eigenvectors
 - Multidimensional scaling (MDS) analysis
 - Identify the most variable genes
-
+<br><br>
 
 **Analysis between groups of interest:**
 - Differential gene expression analysis using DESeq2
@@ -37,7 +37,7 @@ I am here to make that part as easy as possible for you guys so that you can foc
 - KEGG pathway enrichment of the differentially expressed genes
 - KEGG pathway diagrams of the top 5 enriched pathways
 - GSEA analysis (H, C1, C2, C3, C4, C5, C6, C7 genesets)
-
+<br><br>
 
 It took me a solid few weekends to write this package and I’m super excited to share it with you guys and learn how many gazillion hours it saves you on your analysis.
 
@@ -57,7 +57,7 @@ If you have never worked with R programming, naturally you will need to set that
 There are two files that you need to start the analysis.
 1. `Counts table`
 2. `Meta data` file
-
+<br><br>
 
 For this task, I am going to assume that you have the `counts table` ready. Counts table is the un-normalised data where transcripts/genes are in rows and samples are in columns.
 
@@ -131,7 +131,7 @@ Say your dataset contains 9 samples-
 - 3 samples (control)
 - 3 samples (treated with drug-A)
 - 3 samples (treated with drug-B)
-
+<br><br>
 Now I would like to calculate the differentially expressed genes for two different comparisons (`contrasts`).
 
 **Scenario-1:** I would like to identify the genes that have been altered because of drug-A and so I compare the control samples with the samples that have been treated with drug-A. To do so, I use the following `contrast` argument.
@@ -196,28 +196,27 @@ If you now go to the folder where your data was, your will find a new folder nam
 
 **Folder structure**
 
-```
-  ARSeq
-  - General stats
-  		- PCA plot, PCA eigen vectors, MDS plot, most variable genes, heatmap of the most variable genes and Euclidean and Poisson distance plots.
-  - [comparison 1] e.g. control vs drug-A
-  		- Differential expression
-  			 - .CSV file containing the fold change and p.values
-  			 - Heatmap of the differentially expressed genes
-  		- GO enrichment analysis
-    			- Enriched GO terms sorted by p.value
-    			- Top 5 GO terms plot
-  		- GSEA analysis
-    			- Excel sheet with multiple tabs corresponding to the various gene sets from MSigDB
-    			- Top 10 enriched term from each category plot
-  		- KEGG pathway enrichment
-    			- .CSV file containing the most up regulated pathways
-    			- .CSV file containing the most down regulated pathways
-    			- Top 10 enriched pathways plot
-    			- Pathway diagrams
-    				- If there are significantly enriched pathways, the pathway diagram of the top 5 will be saved in this folder
-  		- Sample relation plots
-    			-  PCA plot, PCA eigen vectors, MDS plot, volcano plot and Euclidean and Poisson distance plots.
-```
+ARSeq
+- General stats
+- PCA plot, PCA eigen vectors, MDS plot, most variable genes, heatmap of the most variable genes and Euclidean and Poisson distance plots.
+- [comparison 1] e.g. control vs drug-A
+- Differential expression
+- .CSV file containing the fold change and p.values
+- Heatmap of the differentially expressed genes
+- GO enrichment analysis
+- Enriched GO terms sorted by p.value
+- Top 5 GO terms plot
+- GSEA analysis
+- Excel sheet with multiple tabs corresponding to the various gene sets from MSigDB
+- Top 10 enriched term from each category plot
+- KEGG pathway enrichment
+- .CSV file containing the most up regulated pathways
+- .CSV file containing the most down regulated pathways
+- Top 10 enriched pathways plot
+- Pathway diagrams
+- If there are significantly enriched pathways, the pathway diagram of the top 5 will be saved in this folder
+- Sample relation plots
+-  PCA plot, PCA eigen vectors, MDS plot, volcano plot and Euclidean and Poisson distance plots.
+
 
 For each comparison/contrasts that you perform, a new folder will be created within the ARSeq folder. If you perform the same contrast again, the old results will be overwritten.
