@@ -15,6 +15,8 @@ I am here to make that part as easy as possible for you guys so that you can foc
 
 > Staying true to these words, I present to you `arseq`, an automated RNASeq analysis pipeline (R package) that will empower you to perform a plethora of analysis in 5 lines of code.
 
+![ARSeq- RNASeq analysis in 5 lines](/assets/images/arseq_run.gif)
+
 ## What can `arseq` do?
 **Over all data structure analysis (all samples):**
 - Euclidean distance between samples
@@ -189,6 +191,7 @@ If you now go to the folder where your data was, your will find a new folder nam
 <br><br>
 For each comparison/contrasts that you perform, a new folder will be created within the ARSeq folder. If you perform the same contrast again, the old results will be overwritten.
 <br><br>
+![ARSeq- Results folder](/assets/images/arseq_results.gif)
 
 ## Example dataset
 
