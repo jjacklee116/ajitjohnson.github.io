@@ -91,21 +91,21 @@ The package requires a lot of dependencies and so it is probably going to take a
 Following installation, we are going to load the package, set the working directory and then load your data into the R environment. `Working directory` is nothing but the path to the folder which contains your counts table and meta data files. Let’s go ahead and do that with the following lines of code.
 
 ```R
-# Load the package
+## Load the package
 
 library("arseq")
 
-# Set the working directory (path to the folder of where your data is located)
+## Set the working directory (path to the folder of where your data is located)
 
 setwd("\path to the folder \of where your data is located\")
 
-# Load your counts table into R
-# replace `counts_table.csv` with your file name
+## Load your counts table into R
+## replace `counts_table.csv` with your file name
 
 my_data <- read.csv("counts_table.csv", row.names = 1, header = T)
 
-# Load your meta data into R
-# replace `meta_data.csv` with your file name
+## Load your meta data into R
+## replace `meta_data.csv` with your file name
 
 my_meta <- read.csv("meta_data.csv", row.names = 1, header = T)
 ```
@@ -163,11 +163,11 @@ At the minimum you should have at least one variable, i.e. the column name of th
 Okay, now that we know about both the additional arguments (`contrast & design`), we can run the analysis!
 
 ```R
-# Run the analysis for scenario-1: Identify the differentially expressed genes between control samples and samples treated with drug-A
+## Run the analysis for scenario-1: Identify the differentially expressed genes between control samples and samples treated with drug-A
 
 arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A = c("control"), B= c("drug-A")))
 
-# Run the analysis again for scenario-2: Identify genes that have been altered between the control samples and samples treated with drug-A & drug-B
+## Run the analysis again for scenario-2: Identify genes that have been altered between the control samples and samples treated with drug-A & drug-B
 
 arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A = c("control"), B= c("drug-A", “drug-B”)), general.stats= FALSE)
 ```
@@ -181,7 +181,7 @@ If you do not include this argument, it is not the end of the world. `arseq` wou
 By default, `arseq` would identify the top 1000 most variable genes, if you would like to change this, you can pass in an additional argument called `variable.genes = 500` with the number of variable genes that you would like to compute. In this case, 500.
 
 ```R
-# For changing the number of variable genes needed
+## For changing the number of variable genes needed
 
 arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A = c("control"), B= c("drug-A")),variable.genes = 500)
 ```
