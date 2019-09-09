@@ -91,21 +91,19 @@ The package requires a lot of dependencies and so it is probably going to take a
 Following installation, we are going to load the package, set the working directory and then load your data into the R environment. `Working directory` is nothing but the path to the folder which contains your counts table and meta data files. Let’s go ahead and do that with the following 4 lines of code.
 
 ```R
-## Load the package
+## Loading the package to R environment
 
 library("arseq")
 
-## Set the working directory (path to the folder of where your data is located)
+## Change the working directory (path to the folder of where your data is located)
 
 setwd("\path to the folder \of where your data is located\")
 
-## Load your counts table into R
-## replace `counts_table.csv` with your file name
+## Load your counts table into R, remember to change `counts_table.csv` with your file name
 
 my_data <- read.csv("counts_table.csv", row.names = 1, header = T)
 
-## Load your meta data into R
-## replace `meta_data.csv` with your file name
+## Load your meta data into R and remember to replace `meta_data.csv` with your file name
 
 my_meta <- read.csv("meta_data.csv", row.names = 1, header = T)
 ```
