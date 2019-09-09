@@ -13,7 +13,7 @@ Everyone has their unique way of analysing their data, however, there are a numb
 
 I am here to make that part as easy as possible for you guys so that you can focus on interpreting the results rather than generating them, in hopes it will speed up biological discoveries and advance science in a much faster pace.
 
-> Staying true to these words, I present to you `irseq`, an automated RNASeq analysis pipeline (R package) that will empower you to perform a plethora of analysis in 5 lines of code.
+> Staying true to these words, I present to you `arseq`, an automated RNASeq analysis pipeline (R package) that will empower you to perform a plethora of analysis in 5 lines of code.
 
 ## What can `arseq` do?
 **Over all data structure analysis (all samples):**
