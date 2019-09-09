@@ -49,7 +49,7 @@ It took me a solid few weekends to write this package and I’m super excited to
 ## Let’s get started
 
 ### Set up R
-If you have never worked with R programming, naturally you will need to set that up first. I am not going to show you how to do that here, but if you like you can check out one my [previous blogs](https://ajitjohnson.com/tsne-for-biologist-tutorial/) where I briefly explain the process or you can look it up online. There are tons of amazing [tutorials](https://youtu.be/lVKMsaWju8w).
+If you have never worked with R programming, naturally you will need to set that up first. I am not going to show you how to do that here, but if you would like, you can check out one my [previous blogs](https://ajitjohnson.com/tsne-for-biologist-tutorial/) where I briefly explain the process. There are tons of amazing [tutorials](https://youtu.be/lVKMsaWju8w) online as well.
 
 ![Setting up R be like ](https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif)
 
@@ -59,36 +59,36 @@ There are two files that you need to start the analysis.
 2. `Meta data` file
 <br><br>
 
-For this task, I am going to assume that you have the `counts table` ready. Counts table is the un-normalised data where transcripts/genes are in rows and samples are in columns.
+For this task, I am going to assume that you have the `counts table` ready. Counts table is the un-normalised data where transcripts/genes are in rows and samples in columns. An easy way to figure out if your data is un-normalised counts data is by looking at the counts (numbers). They should be integers (e.g. 1, 5, 23 etc..). If your counts table contains fractional numbers such as (e.g. 0.2, 5.3 etc..), they are probably normalized. Please make sure you are using the un-normalised data as DESeq2 will normalise your data internally.
 
-The package currently supports gene names and ENSEMBLE id’s. If you have gene names (HUGO) as identifiers, please make sure that the various transcripts have been summarised into a single unique gene (I recommend summing them). Below is an example of a counts table.
+The package currently supports gene names and ENSEMBL id’s. If you have gene names (HUGO) as identifiers, please make sure that the various transcripts have been summarised into a single unique gene (I recommend summing them). Below is an example of a counts table.
 
 ![Example counts table](/assets/images/example_data.gif)
 
 Btw, if you would like to learn how to go from FASTQ files to counts table, let me know in the comments below.
 
-I recommend using some established pipelines like [bcbio](https://bcbio-nextgen.readthedocs.io/en/latest/) to go from FASTQ files to counts table. This will again make your life much easier. Here is a nice [tutorial](https://labsyspharm.github.io/rnaseq/) put together by my colleagues to run `bcbio` on a HPC/server. Our HPC at Harvard is called O2 and so replace that with your own.  
+I recommend using some established pipelines like [bcbio](https://bcbio-nextgen.readthedocs.io/en/latest/) to generate counts table from FASTQ files. Here is a nice [tutorial](https://labsyspharm.github.io/rnaseq/) put together by some of my colleagues to run `bcbio` on a HPC/server. Note: our HPC at Harvard is called O2 and so please make sure to replace that with your own.  
 
-Now, that leaves us with the `meta data` file. It is nothing but a .csv file with the first column containing your sample names (same as the counts table and in the same order) followed by columns containing additional information about your samples.
+Now, that leaves us with the `meta data` file. It is nothing but a .csv file with the first column containing your sample names (same as the counts table and in the same order) followed by additional columns containing information about your samples.
 
-Generally the way I prepare my meta data file is by copying the sample names from the counts table and transpose-pasting it in a separate excel sheet. I then continue to add details about the samples. Check the example below.
+Generally the way I prepare my `meta data` file is by copying the sample names from the counts table and transpose-pasting it to a separate excel sheet. I then continue to add details about the samples. Check the example below.
 
 ![Example meta data table](/assets/images/example_meta.gif)
 
-Awesome! We have all we need to begin the RNASeq analysis.
+**Awesome! We have all we need to begin the RNASeq analysis.**
 
 ### Begin the analysis
 
-First lets install the `arseq` package in R. The package requires a minimum R version of 3.4 and so if you haven’t used R in a while, I first suggest updating it to the latest version and then running the following command in the R console to install ‘arseq`.
+First lets install the `arseq` package in R. The package requires a minimum R version of 3.4 and so if you haven’t used R in a while, I first suggest updating it to the latest version and then running the following command in your R console to install ‘arseq`.
 
 ```R
 if( !require(devtools) ) install.packages("devtools")
 devtools::install_github( "ajitjohnson/arseq", INSTALL_opts = "--no-multiarch")
 ```
 
-The package requires a lot of dependencies and so it is probably going to take a while to install everything. Meanwhile enjoy some nice hot tea ☕️.
+The package requires a lot of dependencies and so it is probably going to take a while to install everything. Meanwhile enjoy a nice cup of hot tea ☕️.
 
-Following installation, we are going to load the package, set the working directory and then load your data into the R environment. `Working directory` is nothing but the path to the folder which contains your counts table and meta data files. Let’s go ahead and do that with the following lines of code.
+Following installation, we are going to load the package, set the working directory and then load your data into the R environment. `Working directory` is nothing but the path to the folder which contains your counts table and meta data files. Let’s go ahead and do that with the following 4 lines of code.
 
 ```R
 ## Load the package
@@ -111,7 +111,7 @@ my_meta <- read.csv("meta_data.csv", row.names = 1, header = T)
 ```
 
 Common **errors** at this step could include,
-1. Your files are not in .csv format. This is fine but then you need to look up online on how to import your specific file format into R. For example, if your file is in `.txt` format, you would use `read.table` instead of `read.csv`. An easier alternative is to open your file in excel and save as .csv file. Having said that, please make sure that excel does not convert your gene names into dates. This is a usual bug and I generally find these and remove them manually. If you do not do this, R is going to complain saying that there are duplicates in your file.
+1. Your files are not in .csv format. This is fine but then you need to look up online on how to import your specific file format into R. For example, if your file is in `.txt` format, you would use `read.table` instead of `read.csv`. An easier alternative is to open your file in excel and save as .csv file. Having said that, please make sure that excel does not convert your gene names into dates. This is a usual bug and I generally find these and remove them manually. If you do not do this, R is going to complain saying that there are duplicates in your file.<br>
 2. The second most common error is to have duplicates in the first column of your data files. In the `counts table` that would be the gene names and in the `meta data` file, it would be the sample names. Please make sure these are unique and not duplicated in any way.
 
 If everything worked, we are good to go. Now lets get ready to run the analysis. There is two more thing you need to know before you can run the analysis.
