@@ -69,7 +69,7 @@ The package currently supports gene names and ENSEMBL id’s. If you have gene n
 
 Btw, if you would like to learn how to go from FASTQ files to counts table, let me know in the comments below.
 
-I recommend using some established pipelines like [bcbio](https://bcbio-nextgen.readthedocs.io/en/latest/) to generate counts table from FASTQ files. Here is a nice [tutorial](https://labsyspharm.github.io/rnaseq/) put together by some of my colleagues to run `bcbio` on a HPC/server. Note: our HPC at Harvard is called O2 and so please make sure to replace that with your own.  
+I recommend using some established pipelines like [bcbio](https://bcbio-nextgen.readthedocs.io/en/latest/) to generate counts table from FASTQ files. Here is a nice [tutorial](https://labsyspharm.github.io/rnaseq/) put together by some of my colleagues to run `bcbio` on a HPC/server. Note: our HPC at Harvard is called O2 and so please make sure to replace that with your own.
 
 Now, that leaves us with the `meta data` file. It is nothing but a .csv file with the first column containing your sample names (same as the counts table and in the same order) followed by additional columns containing information about your samples.
 
@@ -165,12 +165,12 @@ arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A =
 
 ## Run the analysis again for scenario-2: Identify genes that have been altered between the control samples and samples treated with drug-A & drug-B
 
-arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A = c("control"), B= c("drug-A", “drug-B”)), general.stats= FALSE)
+arseq (data = my_data, meta = my_meta, design = "treatment", contrast = list(A = c("control"), B= c("drug-A", “drug-B”)), qc= FALSE)
 ```
 
 The results will be saved in the same folder as your input data.
 
-If you had noticed closely, in the second run, I included an additional argument called `general.stats = FALSE`. This is because when we first ran the analysis, it would have already performed and saved all the general analysis of your data. So during the second run and onwards, you can skip it. This will save you time.
+If you had noticed closely, in the second run, I included an additional argument called `qc = FALSE`. This is because when we first ran the analysis, it would have already performed and saved all the general analysis of your data. So during the second run and onwards, you can skip it. This will save you time.
 
 If you do not include this argument, it is not the end of the world. `arseq` would simply re-compute the general analysis and over write the previous results.
 
